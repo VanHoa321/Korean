@@ -2703,7 +2703,7 @@ function renderCards(cards) {
                 </div>
                 <button class="btn btn-light btn-sm rounded-pill mt-3 border w-75 mx-auto text-secondary fw-bold" 
                         onclick="this.previousElementSibling.style.display = 'block'; this.style.display = 'none'; event.stopPropagation();">
-                    <i class="fi fi-rr-eye me-1"></i>Xem đáp án
+                    <i class="fi fi-rr-eye me-1"></i>Đáp án
                 </button>
             `;
         } else if (isQuiz) {
@@ -2715,19 +2715,41 @@ function renderCards(cards) {
                 </div>
             `;
         } else if (isWriting) {
+            div.onclick = function (e) {
+                if (e.target.closest('button') || e.target.tagName === 'CANVAS' || e.target.classList.contains('star-btn') || e.target.classList.contains('speaker-btn')) {
+                    return;
+                }
+
+                const padContainer = this.querySelector('.pad-container');
+                if (padContainer.style.display === 'none') {
+                    padContainer.style.display = 'block'; // Hiện bảng vẽ
+                    
+                    const canvas = document.getElementById('pad-' + card.id);
+                    if (canvas && canvas.width !== canvas.offsetWidth) {
+                        canvas.width = canvas.offsetWidth;
+                        canvas.height = canvas.offsetHeight;
+                    }
+                } else {
+                    padContainer.style.display = 'none'; // Ẩn bảng vẽ
+                }
+            };
+
             div.innerHTML = starHTML + `
                 <div class="vn-text mb-2">${card.vn || ''} ${speakerHTML}</div>
-                <canvas id="pad-${card.id}" class="drawing-pad"></canvas>
-                <div class="d-flex justify-content-between mt-2 px-2">
-                    <button class="btn btn-sm btn-outline-danger" onclick="clearPad('pad-${card.id}', event)">
-                        <i class="fi fi-rr-trash"></i> Xóa nét
-                    </button>
-                    <button class="btn btn-sm btn-outline-success" onclick="showPadAnswer(this, event)">
-                        <i class="fi fi-rr-eye"></i> Đáp án
-                    </button>
-                </div>
-                <div class="kr-result-container text-center mt-2" style="display: none;">
-                    <span class="kr-text">${card.kr}</span>
+                
+                <div class="pad-container" style="display: none; width: 100%;">
+                    <canvas id="pad-${card.id}" class="drawing-pad"></canvas>
+                    <div class="d-flex justify-content-between mt-3 px-2">
+                        <button class="btn btn-sm btn-light border text-dark rounded-pill px-3 fw-medium" onclick="clearPad('pad-${card.id}', event)">
+                            <i class="fi fi-rr-trash"></i> Xóa nét
+                        </button>
+                        <button class="btn btn-sm btn-theme-outline rounded-pill px-3 fw-medium" onclick="showPadAnswer(this, event)">
+                            <i class="fi fi-rr-eye"></i> Đáp án
+                        </button>
+                    </div>
+                    <div class="kr-result-container text-center mt-2" style="display: none;">
+                        <span class="kr-text">${card.kr}</span>
+                    </div>
                 </div>
             `;
         } else {
@@ -2781,19 +2803,42 @@ function toggleStar(cardId, event, iconElement) {
 function speakKorean(text, event) {
     if (event) event.stopPropagation();
     if ('speechSynthesis' in window) {
-        window.speechSynthesis.cancel();
+        window.speechSynthesis.cancel(); // Dừng các âm đang đọc dở
         var msg = new SpeechSynthesisUtterance(text);
         var voices = window.speechSynthesis.getVoices();
-        var koreanVoice = voices.find(voice => voice.name.includes('Google') && voice.lang === 'ko-KR') || voices.find(voice => voice.lang === 'ko-KR');
-        if (koreanVoice) msg.voice = koreanVoice;
+
+        // Lấy tất cả các giọng tiếng Hàn hiện có trên máy
+        var koreanVoices = voices.filter(v => v.lang.includes('ko-KR') || v.lang.includes('ko_KR'));
+        var selectedVoice = null;
+
+        if (koreanVoices.length > 0) {
+            // Ưu tiên 1: Giọng nữ chuẩn, dễ nghe trên iOS/Macbook (Yuna, Sora)
+            selectedVoice = koreanVoices.find(v => v.name.includes('Yuna') || v.name.includes('Sora'));
+
+            // Ưu tiên 2: Giọng Google trên Android (cố gắng loại bỏ giọng có chữ Male)
+            if (!selectedVoice) {
+                selectedVoice = koreanVoices.find(v => v.name.includes('Google') && !v.name.toLowerCase().includes('male'));
+            }
+
+            // Ưu tiên 3: Nếu không tìm thấy các tên trên, lấy giọng bất kỳ NHƯNG tránh giọng nam
+            if (!selectedVoice) {
+                selectedVoice = koreanVoices.find(v => !v.name.toLowerCase().includes('male')) || koreanVoices[0];
+            }
+        }
+
+        if (selectedVoice) {
+            msg.voice = selectedVoice;
+        }
+
         msg.lang = 'ko-KR';
-        msg.rate = 0.85; 
+        msg.rate = 0.85;  // Tốc độ đọc
+        msg.pitch = 1.2;  // TĂNG ĐỘ THANH CỦA GIỌNG LÊN (1.0 là bình thường, 1.2 sẽ làm giọng cao/nữ tính và sáng hơn)
+
         window.speechSynthesis.speak(msg);
     } else {
         alert("Trình duyệt không hỗ trợ phát âm!");
     }
 }
-window.speechSynthesis.onvoiceschanged = function () { window.speechSynthesis.getVoices(); };
 
 // Chế độ Luyện Gõ
 function toggleQuizMode(btn) {
@@ -2850,8 +2895,7 @@ function toggleWriteMode(btn) {
 function initDrawingPads() {
     const canvases = document.querySelectorAll('.drawing-pad');
     canvases.forEach(canvas => {
-        canvas.width = canvas.offsetWidth;
-        canvas.height = canvas.offsetHeight;
+        // KHÔNG set kích thước ở đây nữa vì thẻ đang bị ẩn (đã chuyển lên hàm onclick ở trên)
         
         const ctx = canvas.getContext('2d');
         let isDrawing = false;
