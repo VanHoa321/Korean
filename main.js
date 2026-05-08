@@ -2607,7 +2607,11 @@ function setLesson(les, btn) {
 
 function updateActiveButton(btn) {
     if (!btn || !btn.parentElement) return;
-    var siblings = btn.parentElement.querySelectorAll('.filter-btn');
+    
+    // Xác định nhóm của nút (category-group cho Mục học & Kĩ năng / lesson-buttons cho Chọn Bài)
+    let groupSelector = btn.closest('#lesson-buttons') ? '#lesson-buttons .filter-btn' : '.category-group .filter-btn';
+    
+    var siblings = document.querySelectorAll(groupSelector);
     siblings.forEach(b => {
         if(b.classList.contains('btn-theme')) {
             b.classList.remove('btn-theme');
@@ -2669,7 +2673,8 @@ function renderCards(cards) {
     container.innerHTML = '';
 
     cards.forEach(card => {
-        let colClass = (card.type === 'translate' || card.type === 'practice' || card.type === 'grammar') 
+        // Cập nhật colClass: isWriting = full width (col-12)
+        let colClass = (card.type === 'translate' || card.type === 'practice' || card.type === 'grammar' || isWriting) 
                         ? 'col-12' : 'col-6 col-md-4 col-lg-3';
         
         const wrapper = document.createElement('div');
