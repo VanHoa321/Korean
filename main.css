@@ -185,8 +185,8 @@ body {
     border-radius: 8px;
     background-color: #f8f9fa;
     width: 100%;
-    height: 200px; /* Đã tăng chiều cao lên 200px để tiện cho việc viết nét khi full thẻ */
+    height: 200px;
     cursor: crosshair;
     margin-top: 10px;
-    touch-action: none; /* Ngăn cuộn trang khi vẽ trên điện thoại */
+    touch-action: none;
 }
