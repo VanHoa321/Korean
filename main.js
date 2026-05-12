@@ -2571,6 +2571,8 @@ var currentCat = 'All';
 var currentLes = 'All';
 var isQuiz = false;
 var isWriting = false;
+var isFlashcard = false;
+var isReverseLang = false; // false: Trước VN - Sau Hàn | true: Trước Hàn - Sau VN
 
 window.onload = function () {
     renderLessonButtons();
@@ -2752,7 +2754,51 @@ function renderCards(cards) {
                     </div>
                 </div>
             `;
-        } else {
+        }
+        else if (isFlashcard) {
+            // CHẾ ĐỘ FLASHCARD 3D
+            div.className = 'flip-card'; // Đổi class để CSS lật hoạt động
+            
+            let frontText = !isReverseLang ? (card.vn || '') : card.kr;
+            let frontClass = !isReverseLang ? "vn-text" : "kr-text";
+            
+            let backText = !isReverseLang ? card.kr : (card.vn || '');
+            let backClass = !isReverseLang ? "kr-text" : "vn-text";
+            let backNote = (!isReverseLang && card.note) ? `<div class="card-note mt-2">${card.note}</div>` : '';
+
+            // Icon loa chỉ hiện ở mặt có tiếng Hàn
+            let speakerFront = isReverseLang ? speakerHTML : '';
+            let speakerBack = !isReverseLang ? speakerHTML : '';
+
+            div.onclick = function(e) {
+                // Không lật thẻ nếu click vào sao hoặc loa
+                if(e.target.tagName === 'I') return; 
+                
+                this.classList.toggle('flipped');
+                
+                // Tự động đọc tiếng Hàn khi mặt thẻ lật sang tiếng Hàn
+                let isNowKoreanSide = (!isReverseLang && this.classList.contains('flipped')) || 
+                                      (isReverseLang && !this.classList.contains('flipped'));
+                if(isNowKoreanSide) {
+                    speakKorean(safeKr, null);
+                }
+            };
+
+            div.innerHTML = `
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        ${starHTML}
+                        <div class="${frontClass}">${frontText} ${speakerFront}</div>
+                    </div>
+                    <div class="flip-card-back">
+                        ${starHTML}
+                        <div class="${backClass}">${backText} ${speakerBack}</div>
+                        ${backNote}
+                    </div>
+                </div>
+            `;
+         }
+         else {
             div.onclick = function () {
                 const res = this.querySelector('.kr-result-container');
                 if (res) res.style.display = (res.style.display === 'block' ? 'none' : 'block');
@@ -2953,4 +2999,31 @@ function showPadAnswer(btn, event) {
     event.stopPropagation();
     const resultDiv = btn.parentElement.nextElementSibling;
     resultDiv.style.display = resultDiv.style.display === 'block' ? 'none' : 'block';
+}
+
+function toggleFlashcardMode(btn) {
+    isFlashcard = !isFlashcard;
+    let controls = document.getElementById('flashcard-controls');
+    
+    if (isFlashcard) {
+        btn.classList.remove('btn-theme-outline');
+        btn.classList.add('btn-theme');
+        controls.style.display = 'block';
+        
+        // Tắt các chế độ khác
+        isQuiz = false;
+        isWriting = false;
+        document.getElementById('quiz-btn').className = "btn btn-theme-outline btn-sm rounded-pill d-inline-flex align-items-center";
+        document.getElementById('write-btn').className = "btn btn-theme-outline btn-sm rounded-pill d-inline-flex align-items-center";
+    } else {
+        btn.classList.remove('btn-theme');
+        btn.classList.add('btn-theme-outline');
+        controls.style.display = 'none';
+    }
+    filterCards();
+}
+
+function toggleLangDirection() {
+    isReverseLang = document.getElementById('langToggle').checked;
+    filterCards();
 }

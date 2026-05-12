@@ -87,6 +87,9 @@
                 <button class="btn btn-theme-outline btn-sm rounded-pill filter-btn d-inline-flex align-items-center" onclick="setCategory('translate', this)">
                     <i class="fi fi-rr-edit me-1"></i> Luyện dịch
                 </button>
+                <button class="btn btn-theme-outline btn-sm rounded-pill d-inline-flex align-items-center" id="flashcard-btn" onclick="toggleFlashcardMode(this)">
+                    <i class="fi fi-rr-refresh me-1"></i> Học Flashcard
+                </button>
                 <button class="btn btn-theme-outline btn-sm rounded-pill filter-btn d-inline-flex align-items-center" onclick="setCategory('listening', this)">
                     <i class="fi fi-rr-headphones me-1"></i> Luyện nghe
                 </button>
@@ -96,6 +99,15 @@
                 <button class="btn btn-theme-outline btn-sm rounded-pill d-inline-flex align-items-center" id="write-btn" onclick="toggleWriteMode(this)">
                     <i class="fi fi-rr-pencil me-1"></i> Luyện Viết
                 </button>
+            </div>
+
+            <div id="flashcard-controls" class="mt-3 bg-light p-2 rounded border" style="display: none; max-width: max-content;">
+                <div class="form-check form-switch d-inline-flex align-items-center mb-0">
+                    <input class="form-check-input me-2 mt-0" type="checkbox" id="langToggle" onchange="toggleLangDirection()">
+                    <label class="form-check-label small fw-bold text-theme" style="cursor: pointer;" for="langToggle">
+                        Mặt trên là Tiếng Hàn <i class="fi fi-rr-exchange ms-1"></i>
+                    </label>
+                </div>
             </div>
         </div>
 
