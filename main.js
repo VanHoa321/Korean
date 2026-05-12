@@ -2775,13 +2775,6 @@ function renderCards(cards) {
                 if(e.target.tagName === 'I') return; 
                 
                 this.classList.toggle('flipped');
-                
-                // Tự động đọc tiếng Hàn khi mặt thẻ lật sang tiếng Hàn
-                let isNowKoreanSide = (!isReverseLang && this.classList.contains('flipped')) || 
-                                      (isReverseLang && !this.classList.contains('flipped'));
-                if(isNowKoreanSide) {
-                    speakKorean(safeKr, null);
-                }
             };
 
             div.innerHTML = `

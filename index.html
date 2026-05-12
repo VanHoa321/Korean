@@ -60,15 +60,14 @@
             
             <div class="d-flex flex-wrap gap-2 align-items-center mb-3 pb-3 border-bottom border-light-subtle">
                 <span class="fw-bold text-theme small me-2"><i class="fi fi-rr-apps me-1"></i>MỤC HỌC</span>
-                
+                <button class="btn btn-theme btn-sm rounded-pill filter-btn active d-inline-flex align-items-center" onclick="setCategory('All', this)">
+                    Tất cả
+                </button>
                 <button class="btn btn-theme-outline btn-sm rounded-pill d-inline-flex align-items-center" onclick="shuffleCards()">
                     <i class="fi fi-rr-shuffle me-1"></i> Xáo trộn
                 </button>
                 <button class="btn btn-theme-outline btn-sm rounded-pill d-inline-flex align-items-center" onclick="setCategory('starred', this)">
                     <i class="fi fi-rr-star me-1"></i> Từ khó
-                </button>
-                <button class="btn btn-theme btn-sm rounded-pill filter-btn active d-inline-flex align-items-center" onclick="setCategory('All', this)">
-                    Tất cả
                 </button>
                 <button class="btn btn-theme-outline btn-sm rounded-pill filter-btn d-inline-flex align-items-center" onclick="setCategory('practice', this)">
                     <i class="fi fi-rr-target me-1"></i> Luyện tập
@@ -83,12 +82,11 @@
 
             <div class="d-flex flex-wrap gap-2 align-items-center mt-1">
                 <span class="fw-bold text-theme small me-2"><i class="fi fi-rr-bulb me-1"></i>KĨ NĂNG</span>
-                
-                <button class="btn btn-theme-outline btn-sm rounded-pill filter-btn d-inline-flex align-items-center" onclick="setCategory('translate', this)">
-                    <i class="fi fi-rr-edit me-1"></i> Luyện dịch
-                </button>
                 <button class="btn btn-theme-outline btn-sm rounded-pill d-inline-flex align-items-center" id="flashcard-btn" onclick="toggleFlashcardMode(this)">
                     <i class="fi fi-rr-refresh me-1"></i> Học Flashcard
+                </button>
+                <button class="btn btn-theme-outline btn-sm rounded-pill filter-btn d-inline-flex align-items-center" onclick="setCategory('translate', this)">
+                    <i class="fi fi-rr-edit me-1"></i> Luyện dịch
                 </button>
                 <button class="btn btn-theme-outline btn-sm rounded-pill filter-btn d-inline-flex align-items-center" onclick="setCategory('listening', this)">
                     <i class="fi fi-rr-headphones me-1"></i> Luyện nghe
@@ -101,10 +99,10 @@
                 </button>
             </div>
 
-            <div id="flashcard-controls" class="mt-3 bg-light p-2 rounded border" style="display: none; max-width: max-content;">
-                <div class="form-check form-switch d-inline-flex align-items-center mb-0">
-                    <input class="form-check-input me-2 mt-0" type="checkbox" id="langToggle" onchange="toggleLangDirection()">
-                    <label class="form-check-label small fw-bold text-theme" style="cursor: pointer;" for="langToggle">
+            <div id="flashcard-controls" class="mt-3 text-start" style="display: none;">
+                <div class="form-check form-switch mb-0 ps-0 d-flex align-items-center">
+                    <input class="form-check-input ms-0 mt-0 fs-5" type="checkbox" id="langToggle" onchange="toggleLangDirection()" style="cursor: pointer;">
+                    <label class="form-check-label small fw-bold text-theme ms-2" for="langToggle" style="cursor: pointer; user-select: none;">
                         Mặt trên là Tiếng Hàn <i class="fi fi-rr-exchange ms-1"></i>
                     </label>
                 </div>
