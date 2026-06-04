@@ -60,13 +60,13 @@
             
             <div class="d-flex flex-wrap gap-2 align-items-center mb-3 pb-3 border-bottom border-light-subtle">
                 <span class="fw-bold text-theme small me-2"><i class="fi fi-rr-apps me-1"></i>MỤC HỌC</span>
-                <button class="btn btn-theme btn-sm rounded-pill filter-btn active d-inline-flex align-items-center" onclick="setCategory('All', this)">
+                <button class="btn btn-theme-outline btn-sm rounded-pill filter-btn d-inline-flex align-items-center" onclick="setCategory('All', this)">
                     Tất cả
                 </button>
                 <button class="btn btn-theme-outline btn-sm rounded-pill d-inline-flex align-items-center" onclick="shuffleCards()">
                     <i class="fi fi-rr-shuffle me-1"></i> Xáo trộn
                 </button>
-                <button class="btn btn-theme-outline btn-sm rounded-pill filter-btn d-inline-flex align-items-center" onclick="setCategory('new', this)">
+                <button class="btn btn-theme btn-sm rounded-pill filter-btn d-inline-flex align-items-center" onclick="setCategory('new', this)">
                     <i class="fi fi-rr-sparkles me-1"></i> Từ mới
                 </button>
                 <button class="btn btn-theme-outline btn-sm rounded-pill d-inline-flex align-items-center" onclick="setCategory('starred', this)">
@@ -78,21 +78,12 @@
             </div>
 
             <div class="d-flex flex-wrap gap-2 align-items-center mt-1">
-                <span class="fw-bold text-theme small me-2"><i class="fi fi-rr-bulb me-1"></i>KĨ NĂNG</span>
-                <button class="btn btn-theme-outline btn-sm rounded-pill d-inline-flex align-items-center" id="flashcard-btn" onclick="toggleFlashcardMode(this)">
+                <span class="fw-bold text-theme small me-2"><i class="fi fi-rr-bulb me-1"></i>KỸ NĂNG</span>
+                <button class="btn btn-theme btn-sm rounded-pill d-inline-flex align-items-center" id="flashcard-btn" onclick="toggleFlashcardMode(this)">
                     <i class="fi fi-rr-refresh me-1"></i> Học Flashcard
                 </button>
                 <button class="btn btn-theme-outline btn-sm rounded-pill filter-btn d-inline-flex align-items-center" onclick="setCategory('translate', this)">
                     <i class="fi fi-rr-edit me-1"></i> Luyện dịch
-                </button>
-                <button class="btn btn-theme-outline btn-sm rounded-pill filter-btn d-inline-flex align-items-center" onclick="setCategory('listening', this)">
-                    <i class="fi fi-rr-headphones me-1"></i> Luyện nghe
-                </button>
-                <button class="btn btn-theme-outline btn-sm rounded-pill d-inline-flex align-items-center" id="quiz-btn" onclick="toggleQuizMode(this)">
-                    <i class="fi fi-rr-keyboard me-1"></i> Luyện Gõ
-                </button>
-                <button class="btn btn-theme-outline btn-sm rounded-pill d-inline-flex align-items-center" id="write-btn" onclick="toggleWriteMode(this)">
-                    <i class="fi fi-rr-pencil me-1"></i> Luyện Viết
                 </button>
             </div>
 
@@ -103,6 +94,18 @@
                         Mặt trên là Tiếng Hàn <i class="fi fi-rr-exchange ms-1"></i>
                     </label>
                 </div>
+            </div>
+        </div>
+
+        <div class="filter-section mb-3">
+            <div class="d-flex flex-wrap gap-2 align-items-center pb-3 border-bottom border-light-subtle" id="level-buttons">
+                <span class="fw-bold text-theme small me-2"><i class="fi fi-rr-layers me-1"></i>CẤP HỌC</span>
+                <button class="btn btn-theme btn-sm rounded-pill filter-btn active" onclick="setLevel('TOPIK 1', this)">Sơ cấp 1</button>
+                <button class="btn btn-theme-outline btn-sm rounded-pill filter-btn" onclick="setLevel('TOPIK 2', this)">Sơ cấp 2</button>
+                <button class="btn btn-theme-outline btn-sm rounded-pill filter-btn" onclick="setLevel('TOPIK 3', this)">Trung cấp 3</button>
+                <button class="btn btn-theme-outline btn-sm rounded-pill filter-btn" onclick="setLevel('TOPIK 4', this)">Trung cấp 4</button>
+                <button class="btn btn-theme-outline btn-sm rounded-pill filter-btn" onclick="setLevel('TOPIK 5', this)">Cao cấp 5</button>
+                <button class="btn btn-theme-outline btn-sm rounded-pill filter-btn" onclick="setLevel('TOPIK 6', this)">Cao cấp 6</button>
             </div>
         </div>
 
@@ -120,5 +123,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="main.js"></script>
+    <script src="data.js"></script>
 </body>
 </html>
