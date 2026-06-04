@@ -60,6 +60,14 @@ function setLevel(level, btn) {
 function setCategory(cat, btn) {
     currentCat = cat;
     updateActiveButton(btn);
+    const lessonSection = document.getElementById('lesson-buttons').parentElement;
+
+    if (currentCat === 'grammar') {
+        lessonSection.style.display = 'none';
+        currentLes = 'All';
+    } else {
+        lessonSection.style.display = 'flex';
+    }
     filterCards();
 }
 
