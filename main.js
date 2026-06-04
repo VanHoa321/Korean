@@ -62,7 +62,7 @@ function setCategory(cat, btn) {
     updateActiveButton(btn);
     const lessonSection = document.getElementById('lesson-buttons').parentElement;
 
-    if (currentCat === 'grammar') {
+    if (currentCat === 'grammar' || currentCat === 'personal') {
         lessonSection.style.display = 'none';
         currentLes = 'All';
     } else {

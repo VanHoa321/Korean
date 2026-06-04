@@ -69,14 +69,17 @@
                 <button class="btn btn-theme-outline btn-sm rounded-pill d-inline-flex align-items-center" onclick="shuffleCards()">
                     <i class="fi fi-rr-shuffle me-1"></i> Xáo trộn
                 </button>
+                <button class="btn btn-theme-outline btn-sm rounded-pill filter-btn d-inline-flex align-items-center" onclick="setCategory('grammar', this)">
+                    <i class="fi fi-rr-book-alt me-1"></i> Ngữ pháp
+                </button>
                 <button class="btn btn-theme btn-sm rounded-pill filter-btn d-inline-flex align-items-center" onclick="setCategory('new', this)">
                     <i class="fi fi-rr-sparkles me-1"></i> Từ mới
                 </button>
                 <button class="btn btn-theme-outline btn-sm rounded-pill d-inline-flex align-items-center" onclick="setCategory('starred', this)">
                     <i class="fi fi-rr-star me-1"></i> Từ khó
                 </button>
-                <button class="btn btn-theme-outline btn-sm rounded-pill filter-btn d-inline-flex align-items-center" onclick="setCategory('grammar', this)">
-                    <i class="fi fi-rr-book-alt me-1"></i> Ngữ pháp
+                <button class="btn btn-theme-outline btn-sm rounded-pill filter-btn d-inline-flex align-items-center" onclick="setCategory('personal', this)">
+                    <i class="fi fi-rr-book-alt me-1"></i> Từ luyện đề
                 </button>
             </div>
 
@@ -114,7 +117,7 @@
 
         <div class="filter-section mb-4">
             <div class="d-flex flex-wrap gap-2 align-items-center" id="lesson-buttons">
-                <span class="fw-bold text-theme small me-2"><i class="fi fi-rr-bookmark me-1"></i>CHỌN BÀI</span>
+                <span class="fw-bold text-theme small me-2"><i class="fi fi-rr-bookmark me-1"></i>BÀI HỌC</span>
                 <button class="btn btn-theme btn-sm rounded-pill filter-btn active" onclick="setLesson('All', this)">Tất cả</button>
             </div>
         </div>
