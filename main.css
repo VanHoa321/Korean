@@ -1,14 +1,19 @@
-/* Tùy chỉnh màu chủ đạo */
+
 :root {
-    --theme-color: #0B0B0D; /* Đen sâu */
-    --kr-color: #dc3545;    /* Đỏ cho tiếng Hàn */
+    --theme-color: #0B0B0D; 
+    --kr-color: #dc3545;   
     --text-white: #ffffff;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f5f6f8; /* Nền xám cực nhạt để nổi bật form trắng */
+    font-family: 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f5f6f8;
     color: var(--theme-color);
+}
+
+.korean-text {
+    font-family: "Noto Serif KR", serif !important;
+    font-weight: 400;
 }
 
 /* Header & Sidebar */
@@ -198,7 +203,7 @@ body {
     background-color: transparent;
     position: relative;
     width: 100%;
-    height: 140px; /* Chiều cao cố định cho đẹp */
+    height: 160px; /* Chiều cao cố định cho đẹp */
     perspective: 1000px;
     cursor: pointer;
 }

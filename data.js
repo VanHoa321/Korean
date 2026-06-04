@@ -1,152 +1,154 @@
 var data = [
-    // --- BÀI 1 ---
-    { id: 'g1', level: 'TOPIK 1', lesson: 'Bài 1', type: 'grammar', kr: "N + 입니다 / 입니까?", vn: "Là... / Là... phải không?", note: "입니다 dùng trong câu khẳng định. 입니까? dùng cho câu hỏi." },
-    { id: 'g2', level: 'TOPIK 1', lesson: 'Bài 1', type: 'grammar', kr: "N + 은/는", vn: "Tiểu từ chủ ngữ (Chủ đề)", note: "Có patchim dùng 은. Không có patchim dùng 는. Ví dụ: 저는 학생입니다." },
-    
-    // --- BÀI 2 ---
-    { id: 'g3', level: 'TOPIK 1', lesson: 'Bài 2', type: 'grammar', kr: "N + 이/가 아닙니다", vn: "Không phải là N", note: "Có patchim dùng 이 아닙니다. Không có patchim dùng 가 아닙니다." },
-    { id: 'g4', level: 'TOPIK 1', lesson: 'Bài 2', type: 'grammar', kr: "이 / 그 / 저 (이것 / 그것 / 저것)", vn: "Đây / Đó / Kia (Cái này / đó / kia)", note: "이: Gần người nói. 그: Gần người nghe. 저: Xa cả hai." },
-    { id: 'g5', level: 'TOPIK 1', lesson: 'Bài 2', type: 'grammar', kr: "장소 + 에 있습니다/없습니다", vn: "Có / Không có ở đâu", note: "Chỉ sự tồn tại của sự vật ở một địa điểm. Ví dụ: 교실에 학생이 있습니다." },
 
-    // --- BÀI 3 ---
-    { id: 'g6', level: 'TOPIK 1', lesson: 'Bài 3', type: 'grammar', kr: "N + 을/를", vn: "Tiểu từ tân ngữ", note: "Gắn sau danh từ chịu tác động của hành động. Có patchim dùng 을, không patchim dùng 를." },
-    { id: 'g7', level: 'TOPIK 1', lesson: 'Bài 3', type: 'grammar', kr: "V/A + ㅂ/습니다", vn: "Đuôi câu lịch sự, trang trọng", note: "Có patchim dùng 습니다. Không có patchim dùng ㅂ니다. Câu hỏi dùng ㅂ/습니까?" },
-    { id: 'g8', level: 'TOPIK 1', lesson: 'Bài 3', type: 'grammar', kr: "장소 + 에서 + V", vn: "Làm gì ở đâu", note: "Chỉ địa điểm nơi ĐANG xảy ra hành động. Ví dụ: 공원에서 운동합니다." },
+    { id: 'sc1_g1', level: 'TOPIK 1', lesson: 'Bài 1', type: 'grammar', kr: 'N 입니다', vn: 'Là N', note: '' },
+    { id: 'sc1_g2', level: 'TOPIK 1', lesson: 'Bài 1', type: 'grammar', kr: 'N 입니까?', vn: 'Là N phải không?', note: '' },
+    { id: 'sc1_g3', level: 'TOPIK 1', lesson: 'Bài 1', type: 'grammar', kr: 'N 은/는', vn: 'Tiểu từ chủ ngữ (1)', note: '' },
 
-    // --- BÀI 4 ---
-    { id: 'g9', level: 'TOPIK 1', lesson: 'Bài 4', type: 'grammar', kr: "N + 와/과 + N", vn: "Và, với (Nối danh từ)", note: "N1 có patchim dùng 과. N1 không có patchim dùng 와." },
-    { id: 'g10', level: 'TOPIK 1', lesson: 'Bài 4', type: 'grammar', kr: "시간 + 에", vn: "Vào, vào lúc (Thời gian)", note: "Không dùng '에' sau: 언제, 그저께, 어제, 오늘, 내일, 모레." },
+    // BÀI 2: Trường học
+    { id: 'sc1_g4', level: 'TOPIK 1', lesson: 'Bài 2', type: 'grammar', kr: 'N 이/가 아닙니다', vn: 'Không phải là N', note: '' },
+    { id: 'sc1_g5', level: 'TOPIK 1', lesson: 'Bài 2', type: 'grammar', kr: 'N 이/가', vn: 'Tiểu từ chủ ngữ', note: '' },
+    { id: 'sc1_g6', level: 'TOPIK 1', lesson: 'Bài 2', type: 'grammar', kr: 'N 에 있습니다/없습니다', vn: 'Có / không có ở N', note: '' },
 
-    // --- BÀI 5 ---
-    { id: 'g11', level: 'TOPIK 1', lesson: 'Bài 5', type: 'grammar', kr: "V/A + 아/어/해요", vn: "Đuôi câu thân mật", note: "Có nguyên âm ㅏ, ㅗ -> 아요. Động từ 하다 -> 해요. Còn lại -> 어요." },
-    { id: 'g12', level: 'TOPIK 1', lesson: 'Bài 5', type: 'grammar', kr: "장소 + 에 가다/오다", vn: "Đi đến / Tới đâu đó", note: "Chỉ hướng di chuyển tới một địa điểm. Ví dụ: 학교에 가요." },
-    { id: 'g13', level: 'TOPIK 1', lesson: 'Bài 5', type: 'grammar', kr: "안 + V/A", vn: "Không... (Phủ định)", note: "Đứng trước động/tính từ. Với V-하다 thì chuyển thành Danh từ + 안 + 하다." },
+    // BÀI 3: Sinh hoạt hằng ngày
+    { id: 'sc1_g7', level: 'TOPIK 1', lesson: 'Bài 3', type: 'grammar', kr: 'V/A ㅂ/습니다', vn: 'Đuôi câu trần thuật trang trọng', note: '' },
+    { id: 'sc1_g8', level: 'TOPIK 1', lesson: 'Bài 3', type: 'grammar', kr: 'V/A ㅂ/습니까?', vn: 'Đuôi câu nghi vấn trang trọng', note: '' },
+    { id: 'sc1_g9', level: 'TOPIK 1', lesson: 'Bài 3', type: 'grammar', kr: 'N 을/를', vn: 'Tiểu từ tân ngữ', note: '' },
+    { id: 'sc1_g10', level: 'TOPIK 1', lesson: 'Bài 3', type: 'grammar', kr: 'N 에서', vn: 'Ở / tại N (nơi xảy ra hành động)', note: '' },
 
-    // --- BÀI 6 ---
-    { id: 'g14', level: 'TOPIK 1', lesson: 'Bài 6', type: 'grammar', kr: "N + 하고", vn: "Và, cùng, với N", note: "Dùng linh hoạt trong văn nói, không phụ thuộc vào patchim." },
-    { id: 'g15', level: 'TOPIK 1', lesson: 'Bài 6', type: 'grammar', kr: "V + (으)ㅂ시다", vn: "Cùng nhau làm gì đó đi", note: "Đuôi câu rủ rê, đề nghị. Có patchim -> 읍시다. Không patchim -> ㅂ시다." },
-    { id: 'g16', level: 'TOPIK 1', lesson: 'Bài 6', type: 'grammar', kr: "V/A + 았/었/했어요", vn: "Đã... (Quá khứ)", 실: "Cách chia tương tự đuôi 아/어요 nhưng gắn thêm ㅆ. Ví dụ: 샀어요, 먹었어요." },
+    // BÀI 4: Ngày và thứ
+    { id: 'sc1_g11', level: 'TOPIK 1', lesson: 'Bài 4', type: 'grammar', kr: 'Nthời gian 에', vn: 'Vào, vào lúc', note: '' },
+    { id: 'sc1_g12', level: 'TOPIK 1', lesson: 'Bài 4', type: 'grammar', kr: 'V/A 았/었', vn: 'Đã (Thì quá khứ)', note: '' },
+    { id: 'sc1_g13', level: 'TOPIK 1', lesson: 'Bài 4', type: 'grammar', kr: 'N 와/과/하고/(이)랑', vn: 'Và / với', note: '' },
 
-    // --- BÀI 7 ---
-    { id: 'g17', level: 'TOPIK 1', lesson: 'Bài 7', type: 'grammar', kr: "Bất quy tắc '으'", vn: "Lược bỏ '으'", note: "Khi kết hợp đuôi bắt đầu bằng nguyên âm, '으' bị lược bỏ, chia theo nguyên âm phía trước nó." },
-    { id: 'g18', level: 'TOPIK 1', lesson: 'Bài 7', type: 'grammar', kr: "V + 고 싶다", vn: "Muốn làm gì đó", note: "Dùng cho ngôi thứ 1 và 2. Ngôi thứ 3 dùng '고 싶어 하다'." },
+    // BÀI 5: Công việc trong ngày
+    { id: 'sc1_g14', level: 'TOPIK 1', lesson: 'Bài 5', type: 'grammar', kr: 'V/A 아/어요', vn: 'Đuôi câu thân mật, thông dụng', note: '' },
+    { id: 'sc1_g15', level: 'TOPIK 1', lesson: 'Bài 5', type: 'grammar', kr: 'N 에 가다/오다', vn: 'Đi / đến N (Đích đến của hành động)', note: '' },
+    { id: 'sc1_g16', level: 'TOPIK 1', lesson: 'Bài 5', type: 'grammar', kr: '안 + V/A', vn: 'Không', note: '' },
+    { id: 'sc1_g17', level: 'TOPIK 1', lesson: 'Bài 5', type: 'grammar', kr: 'V/A 지 않다', vn: 'Không', note: '' },
 
-    // --- BÀI 8 ---
-    { id: 'g19', level: 'TOPIK 1', lesson: 'Bài 8', type: 'grammar', kr: "V + 겠다", vn: "Sẽ làm gì (Ý định)", note: "Dự định của bản thân hoặc phỏng đoán (Chắc là sẽ...). Ví dụ: 먹겠습니다, 맵겠어요." },
-    { id: 'g20', level: 'TOPIK 1', lesson: 'Bài 8', type: 'grammar', kr: "V/A + 지 않다", vn: "Không... (Phủ định dài)", note: "Đồng nghĩa với 안 + V. Ví dụ: 공부하지 않습니다." },
-    { id: 'g21', level: 'TOPIK 1', lesson: 'Bài 8', type: 'grammar', kr: "V + (으)세요", vn: "Hãy... (Mệnh lệnh)", note: "Có patchim dùng 으세요. Không patchim dùng 세요." },
+    // BÀI 6: Cuối tuần
+    { id: 'sc1_g18', level: 'TOPIK 1', lesson: 'Bài 6', type: 'grammar', kr: 'V (으)ㅂ시다', vn: 'Hãy cùng làm gì', note: '' },
+    { id: 'sc1_g19', level: 'TOPIK 1', lesson: 'Bài 6', type: 'grammar', kr: 'V 고 싶다', vn: 'Muốn (Chủ ngữ ngôi thứ 1, 2)', note: '' },
+    { id: 'sc1_g20', level: 'TOPIK 1', lesson: 'Bài 6', type: 'grammar', kr: 'V 고 싶어하다', vn: 'Muốn (Chủ ngữ ngôi thứ 3)', note: '' },
 
-    // --- BÀI 9 ---
-    { id: 'g22', level: 'TOPIK 1', lesson: 'Bài 9', type: 'grammar', kr: "N + (으)로", vn: "Bằng (phương tiện) / Về phía", note: "Có patchim dùng 으로. Không patchim hoặc kết thúc bằng 'ㄹ' dùng 로." },
-    { id: 'g23', level: 'TOPIK 1', lesson: 'Bài 9', type: 'grammar', kr: "V + (으)ㄹ래요?", vn: "Nhé, nhỉ? (Rủ rê)", note: "Hỏi ý kiến cùng thực hiện. (Dạng trần thuật mang nghĩa là 'Muốn')." },
-    { id: 'g24', level: 'TOPIK 1', lesson: 'Bài 9', type: 'grammar', kr: "V + (으)ㄹ까요?", vn: "Nhé, nhỉ? (Hỏi ý kiến)", note: "Hỏi để xin lời khuyên hoặc rủ rê. Ví dụ: 무엇을 먹을까요?" },
-    { id: 'g25', level: 'TOPIK 1', lesson: 'Bài 9', type: 'grammar', kr: "N + 도", vn: "Cũng", note: "Thay thế cho các tiểu từ chủ ngữ/tân ngữ. Ví dụ: 저도..." },
+    // BÀI 7: Mua sắm
+    { id: 'sc1_g21', level: 'TOPIK 1', lesson: 'Bài 7', type: 'grammar', kr: 'V (으)세요', vn: 'Hãy, xin vui lòng làm gì', note: '' },
+    { id: 'sc1_g22', level: 'TOPIK 1', lesson: 'Bài 7', type: 'grammar', kr: 'N 도', vn: 'Cũng', note: '' },
+    { id: 'sc1_g23', level: 'TOPIK 1', lesson: 'Bài 7', type: 'grammar', kr: 'N 만', vn: 'Chỉ', note: '' },
 
-    // --- BÀI 10 ---
-    { id: 'g26', level: 'TOPIK 1', lesson: 'Bài 10', type: 'grammar', kr: "N + 께서/께서는", vn: "Kính ngữ của tiểu từ chủ ngữ", note: "Dùng thay cho 이/가 hoặc 은/는 khi nói về người lớn tuổi, bề trên." },
-    { id: 'g27', level: 'TOPIK 1', lesson: 'Bài 10', type: 'grammar', kr: "V/A + (으)시다", vn: "Đuôi câu kính ngữ", note: "Có patchim -> 으시다. Không patchim -> 시다. Dạng hiện tại: (으)십니다 / (으)세요." },
-    { id: 'g28', level: 'TOPIK 1', lesson: 'Bài 10', type: 'grammar', kr: "Bất quy tắc 'ㄹ'", vn: "Lược bỏ 'ㄹ'", note: "Khi 'ㄹ' gặp 'ㄴ, ㅂ, ㅅ' hoặc '으' thì 'ㄹ' sẽ bị biến mất. Ví dụ: 살다 + 세요 -> 사세요." },
+    // BÀI 8: Thức ăn
+    { id: 'sc1_g24', level: 'TOPIK 1', lesson: 'Bài 8', type: 'grammar', kr: 'V 겠', vn: 'Sẽ (Thể hiện ý định hoặc phỏng đoán)', note: '' },
+    { id: 'sc1_g25', level: 'TOPIK 1', lesson: 'Bài 8', type: 'grammar', kr: 'V (으)ㄹ래요?', vn: 'Nhé? / nhỉ? (Hỏi ý kiến, ý định người nghe)', note: '' },
 
-    // --- BÀI 11 ---
-    { id: 'g29', level: 'TOPIK 1', lesson: 'Bài 11', type: 'grammar', kr: "V/A + 고", vn: "Và, rồi, còn", note: "Nối 2 vế câu hoặc liệt kê hành động theo thứ tự thời gian." },
-    { id: 'g30', level: 'TOPIK 1', lesson: 'Bài 11', type: 'grammar', kr: "시간 + 부터 ~ 까지", vn: "Từ (giờ) đến (giờ)", note: "Chỉ khoảng cách về mặt thời gian." },
-    { id: 'g31', level: 'TOPIK 1', lesson: 'Bài 11', type: 'grammar', kr: "V + (으)ㄹ 거예요/게요", vn: "Sẽ (Dự định, tương lai)", note: "Dự định hoặc hứa hẹn sẽ làm một việc gì đó trong tương lai." },
-    { id: 'g32', level: 'TOPIK 1', lesson: 'Bài 11', type: 'grammar', kr: "Bất quy tắc 'ㅂ'", vn: "'ㅂ' chuyển thành '우'", note: "Khi gặp nguyên âm, 'ㅂ' bị lược bỏ và thêm '우'. (Trừ 돕다, 곱다 -> 오)." },
+    // BÀI 9: Nhà cửa
+    { id: 'sc1_g26', level: 'TOPIK 1', lesson: 'Bài 9', type: 'grammar', kr: 'N(으)로', vn: 'Phương hướng, về phía (1) / Bằng, phương thức (2)', note: '' },
+    { id: 'sc1_g27', level: 'TOPIK 1', lesson: 'Bài 9', type: 'grammar', kr: 'V(으)시다 → (으)세요', vn: 'Đuôi câu kính ngữ', note: '' },
+    { id: 'sc1_g28', level: 'TOPIK 1', lesson: 'Bài 9', type: 'grammar', kr: '께서 / 께서는', vn: 'Hình thức kính trọng của tiểu từ chủ ngữ', note: '' },
 
-    // --- BÀI 12 ---
-    { id: 'g33', level: 'TOPIK 1', lesson: 'Bài 12', type: 'grammar', kr: "V + 아/어 주다 (드리다)", vn: "Làm gì cho ai", note: "드리다/주시다 dùng khi nói với người bề trên." },
-    { id: 'g34', level: 'TOPIK 1', lesson: 'Bài 12', type: 'grammar', kr: "N + 에게 / 한테 / 께", vn: "Cho ai, đối với ai", note: "한테 (văn nói), 에게 (văn viết), 께 (kính ngữ)." },
-    { id: 'g35', level: 'TOPIK 1', lesson: 'Bài 12', type: 'grammar', kr: "V/A + 지만", vn: "Nhưng", note: "Nối 2 vế câu mang ý nghĩa tương phản. Ví dụ: 맵지만 맛있어요." },
-    { id: 'g36', level: 'TOPIK 1', lesson: 'Bài 12', type: 'grammar', kr: "V + (으)려고 하다", vn: "Dự định, định làm gì", note: "Thể hiện kế hoạch sẽ thực hiện. Có patchim -> 으려고 하다." },
+    // BÀI 10: Gia đình
+    { id: 'sc1_g29', level: 'TOPIK 1', lesson: 'Bài 10', type: 'grammar', kr: 'V/A 고', vn: 'Và / còn (1) / Rồi (2)', note: '' },
+    { id: 'sc1_g30', level: 'TOPIK 1', lesson: 'Bài 10', type: 'grammar', kr: 'N은/는', vn: 'Tiểu từ đặc biệt mang nghĩa so sánh (2)', note: '' },
 
-    // --- BÀI 13 ---
-    { id: 'g37', level: 'TOPIK 1', lesson: 'Bài 13', type: 'grammar', kr: "V/A + 아/어서", vn: "Vì... nên...", note: "Mệnh đề sau KHÔNG dùng đuôi mệnh lệnh (세요) hay rủ rê (ㅂ시다)." },
-    { id: 'g38', level: 'TOPIK 1', lesson: 'Bài 13', type: 'grammar', kr: "V + 지 못하다 / 못 V", vn: "Không thể làm gì", note: "Chỉ sự bất khả kháng (muốn làm nhưng không có khả năng/điều kiện làm)." },
+    // BÀI 11: Thời tiết
+    { id: 'sc1_g31', level: 'TOPIK 1', lesson: 'Bài 11', type: 'grammar', kr: '...부터 ...까지', vn: 'Từ ... đến ... (Thời gian)', note: '' },
+    { id: 'sc1_g32', level: 'TOPIK 1', lesson: 'Bài 11', type: 'grammar', kr: '...에서 ...까지', vn: 'Từ ... đến ... (Địa điểm)', note: '' },
+    { id: 'sc1_g33', level: 'TOPIK 1', lesson: 'Bài 11', type: 'grammar', kr: 'V/A (으)ㄹ 거예요', vn: 'Sẽ (Thì tương lai 1) / Phỏng đoán (2)', note: '' },
 
-    // --- BÀI 14 ---
-    { id: 'g39', level: 'TOPIK 1', lesson: 'Bài 14', type: 'grammar', kr: "V + (으)ㄹ 수 있다/없다", vn: "Có thể / Không thể", note: "Chỉ năng lực có thể hoặc không thể làm một việc gì đó." },
-    { id: 'g40', level: 'TOPIK 1', lesson: 'Bài 14', type: 'grammar', kr: "V + 기 / 는 것", vn: "Động từ hóa Danh từ", note: "Biến động từ thành danh từ (Việc...). Ví dụ: 영화를 보는 것 (Việc xem phim)." },
-    { id: 'g41', level: 'TOPIK 1', lesson: 'Bài 14', type: 'grammar', kr: "Bất quy tắc 'ㄷ'", vn: "'ㄷ' chuyển thành 'ㄹ'", note: "Khi gặp nguyên âm, 'ㄷ' biến thành 'ㄹ'. (Trừ 닫다, 받다, 믿다 thì giữ nguyên)." },
+    // BÀI 12: Điện thoại
+    { id: 'sc1_g34', level: 'TOPIK 1', lesson: 'Bài 12', type: 'grammar', kr: '에게/한테/께', vn: 'Cho (ai), tới (ai), đến (ai)', note: '' },
+    { id: 'sc1_g35', level: 'TOPIK 1', lesson: 'Bài 12', type: 'grammar', kr: '에게서/한테서/께', vn: 'Từ (ai)', note: '' },
+    { id: 'sc1_g36', level: 'TOPIK 1', lesson: 'Bài 12', type: 'grammar', kr: 'V/A 지만', vn: 'Nhưng', note: '' },
 
-    // --- BÀI 15 ---
-    { id: 'g42', level: 'TOPIK 1', lesson: 'Bài 15', type: 'grammar', kr: "장소 + 에서 ~ 까지", vn: "Từ (đâu) đến (đâu)", note: "Chỉ khoảng cách về mặt không gian, địa điểm." },
-    { id: 'g43', level: 'TOPIK 1', lesson: 'Bài 15', type: 'grammar', kr: "장소 + 에 + V + (으)러 가다", vn: "Đi đến đâu để làm gì", note: "Chỉ mục đích của sự di chuyển. Ví dụ: 영화를 보러 가요." },
+    // BÀI 13: Sinh nhật
+    { id: 'sc1_g37', level: 'TOPIK 1', lesson: 'Bài 13', type: 'grammar', kr: 'V (으)려고 하다', vn: 'Định làm gì', note: '' },
+    { id: 'sc1_g38', level: 'TOPIK 1', lesson: 'Bài 13', type: 'grammar', kr: 'N (이)라서', vn: 'Vì là N', note: '' },
+    { id: 'sc1_g39', level: 'TOPIK 1', lesson: 'Bài 13', type: 'grammar', kr: 'V/A 아/어서', vn: 'Vì... nên... (1) / Rồi (2)', note: '' },
 
-	// ==========================================
-    // BỘ DỮ LIỆU NGỮ PHÁP SC1
+    // BÀI 14: Sở thích
+    { id: 'sc1_g40', level: 'TOPIK 1', lesson: 'Bài 14', type: 'grammar', kr: 'V (으)ㄹ까요?', vn: 'Nhé? / nhỉ? (Gợi ý, rủ rê hoặc đề nghị)', note: '' },
+    { id: 'sc1_g41', level: 'TOPIK 1', lesson: 'Bài 14', type: 'grammar', kr: '못 + V / V 지 못하다', vn: 'Không thể làm gì', note: '' },
+    { id: 'sc1_g42', level: 'TOPIK 1', lesson: 'Bài 14', type: 'grammar', kr: 'V/A (으)ㄹ 수 있다/없다', vn: 'Có thể / Không thể', note: '' },
+
+    // BÀI 15: Giao thông
+    { id: 'sc1_g43', level: 'TOPIK 1', lesson: 'Bài 15', type: 'grammar', kr: 'V 기/는 것', vn: 'Cái việc... (Động từ hóa danh từ)', note: '' },
+    { id: 'sc1_g44', level: 'TOPIK 1', lesson: 'Bài 15', type: 'grammar', kr: 'V (으)러 가다/오다', vn: 'Đi để / đến để làm gì', note: '' },
+    { id: 'sc1_g45', level: 'TOPIK 1', lesson: 'Bài 15', type: 'grammar', kr: 'N1 의 N2', vn: 'N2 của N1', note: '' },
+
+
     // ==========================================
+    // SƠ CẤP 2 (TOPIK 2) - 15 BÀI
+    // ==========================================
+    
+    // BÀI 1: Gặp gỡ
+    { id: 'sc2_g1', level: 'TOPIK 2', lesson: 'Bài 1', type: 'grammar', kr: 'V/A (으)ㄹ 때 / N 때', vn: 'Khi...', note: '' },
+    { id: 'sc2_g2', level: 'TOPIK 2', lesson: 'Bài 1', type: 'grammar', kr: 'V 아/er 주다', vn: 'Làm gì cho ai đó', note: '' },
+    { id: 'sc2_g3', level: 'TOPIK 2', lesson: 'Bài 1', type: 'grammar', kr: 'V/A (으)니까 / N (이)니까', vn: 'Vì... nên...', note: '' },
 
-    // --- BÀI 1 ---
-    { id: 'g101', level: 'TOPIK 1', lesson: 'Bài 1', type: 'grammar', kr: "N + 입니다", vn: "Là... (Đuôi câu trần thuật)", note: "Là hình thức kính ngữ của '이다'. Đứng sau danh từ." },
-    { id: 'g102', level: 'TOPIK 1', lesson: 'Bài 1', type: 'grammar', kr: "N + 입니까?", vn: "Là... phải không? (Đuôi câu hỏi)", note: "Dạng câu hỏi của '입니다'." },
-    { id: 'g103', level: 'TOPIK 1', lesson: 'Bài 1', type: 'grammar', kr: "N + 은/는", vn: "Tiểu từ chủ đề", note: "Đứng sau N làm chủ ngữ. Có patchim + 은 / Không có patchim + 는." },
+    // BÀI 2: Bệnh viện
+    { id: 'sc2_g4', level: 'TOPIK 2', lesson: 'Bài 2', type: 'grammar', kr: 'V 지 말다', vn: 'Đừng làm gì', note: '' },
+    { id: 'sc2_g5', level: 'TOPIK 2', lesson: 'Bài 2', type: 'grammar', kr: 'V 아/어도 되다', vn: 'Được phép làm gì', note: '' },
+    { id: 'sc2_g6', level: 'TOPIK 2', lesson: 'Bài 2', type: 'grammar', kr: 'N 보다 / N 에 비해서', vn: 'So với...', note: '' },
 
-    // --- BÀI 2 ---
-    { id: 'g201', level: 'TOPIK 1', lesson: 'Bài 2', type: 'grammar', kr: "이 / 그 / 저 + N", vn: "Này / Đó / Kia", note: "이 (Gần người nói), 그 (Gần người nghe), 저 (Xa cả hai). Đối với đồ vật dùng: 이것 / 그것 / 저것." },
-    { id: 'g202', level: 'TOPIK 1', lesson: 'Bài 2', type: 'grammar', kr: "장소 + 에 있습니다/없습니다", vn: "Có / Không có ở...", note: "Chỉ vị trí, sự tồn tại của sự vật. (장소 = Địa điểm)." },
-    { id: 'g203', level: 'TOPIK 1', lesson: 'Bài 2', type: 'grammar', kr: "N + 이/가 아닙니다", vn: "Không phải là N", note: "Phủ định của '입니다'. Có patchim + 이 아닙니다 / Không có patchim + 가 아닙니다." },
+    // BÀI 3: Bưu điện
+    { id: 'sc2_g7', level: 'TOPIK 2', lesson: 'Bài 3', type: 'grammar', kr: 'A 은/ㄴ + N', vn: 'Định ngữ của tính từ', note: '' },
+    { id: 'sc2_g8', level: 'TOPIK 2', lesson: 'Bài 3', type: 'grammar', kr: 'V 은/ㄴ + N', vn: 'Định ngữ của động từ thì quá khứ', note: '' },
+    { id: 'sc2_g9', level: 'TOPIK 2', lesson: 'Bài 3', type: 'grammar', kr: 'V 는 + N', vn: 'Định ngữ của động từ thì hiện tại', note: '' },
+    { id: 'sc2_g10', level: 'TOPIK 2', lesson: 'Bài 3', type: 'grammar', kr: 'V 을/ㄹ + N', vn: 'Định ngữ của động từ thì tương lai', note: '' },
 
-    // --- BÀI 3 ---
-    { id: 'g301', level: 'TOPIK 1', lesson: 'Bài 3', type: 'grammar', kr: "V/A + ㅂ/습니다", vn: "Đuôi câu trần thuật (Kính ngữ)", note: "Có patchim + 습니다 / Không có patchim + ㅂ니다." },
-    { id: 'g302', level: 'TOPIK 1', lesson: 'Bài 3', type: 'grammar', kr: "V/A + ㅂ/습니까?", vn: "Đuôi câu hỏi (Kính ngữ)", note: "Có patchim + 습니까? / Không có patchim + ㅂ니까?" },
-    { id: 'g303', level: 'TOPIK 1', lesson: 'Bài 3', type: 'grammar', kr: "N + 을/를", vn: "Tiểu từ tân ngữ", note: "Đứng sau N chỉ đối tượng bị tác động. Có patchim + 을 / Không patchim + 를." },
-    { id: 'g304', level: 'TOPIK 1', lesson: 'Bài 3', type: 'grammar', kr: "장소 + 에서 + V", vn: "Làm gì ở đâu", note: "Chỉ địa điểm ĐANG DIỄN RA hành động." },
+    // BÀI 4: Bạn bè
+    { id: 'sc2_g11', level: 'TOPIK 2', lesson: 'Bài 4', type: 'grammar', kr: 'N 마다', vn: 'Mỗi / mọi / các', note: '' },
+    { id: 'sc2_g12', level: 'TOPIK 2', lesson: 'Bài 4', type: 'grammar', kr: 'V 아/어야 하다', vn: 'Phải làm gì', note: '' },
+    { id: 'sc2_g13', level: 'TOPIK 2', lesson: 'Bài 4', type: 'grammar', kr: 'V/A (으)면', vn: 'Nếu...', note: '' },
 
-    // --- BÀI 4 ---
-    { id: 'g401', level: 'TOPIK 1', lesson: 'Bài 4', type: 'grammar', kr: "일, 이, 삼, 사...", vn: "Số Hán Hàn", note: "Dùng cho: Ngày, tháng, năm, số điện thoại, số tầng, số phút, tiền tệ." },
-    { id: 'g402', level: 'TOPIK 1', lesson: 'Bài 4', type: 'grammar', kr: "N + 와/과 + N", vn: "Và, với (Nối danh từ)", note: "Có patchim + 과 / Không có patchim + 와." },
-    { id: 'g403', level: 'TOPIK 1', lesson: 'Bài 4', type: 'grammar', kr: "시간 + 에", vn: "Vào lúc... (Thời gian)", note: "Đứng sau danh từ thời gian (Trừ 오늘, 내일, 어제, 모레, 그저께)." },
+    // BÀI 5: Đặt chỗ
+    { id: 'sc2_g14', level: 'TOPIK 2', lesson: 'Bài 5', type: 'grammar', kr: 'V/A 지요? (죠?)', vn: 'Đúng không? / Phải không?', note: '' },
+    { id: 'sc2_g15', level: 'TOPIK 2', lesson: 'Bài 5', type: 'grammar', kr: 'V (으)려고', vn: 'Định / Để làm gì', note: '' },
+    { id: 'sc2_g16', level: 'TOPIK 2', lesson: 'Bài 5', type: 'grammar', kr: 'V (으)ㄹ게요', vn: 'Sẽ (Hứa hẹn làm gì)', note: '' },
 
-    // --- BÀI 5 ---
-    { id: 'g501', level: 'TOPIK 1', lesson: 'Bài 5', type: 'grammar', kr: "하나, 둘, 셋, 넷...", vn: "Số Thuần Hàn", note: "Dùng để đếm (cái, con, người...) và chỉ Giờ. Biến đổi khi đi với danh từ đếm: 한, 두, 세, 네, 스무." },
-    { id: 'g502', level: 'TOPIK 1', lesson: 'Bài 5', type: 'grammar', kr: "몇 + Danh từ đếm", vn: "Mấy, bao nhiêu", note: "Dùng để hỏi số lượng (Ví dụ: 몇 시, 몇 명...)." },
-    { id: 'g503', level: 'TOPIK 1', lesson: 'Bài 5', type: 'grammar', kr: "V/A + 아/어/해요", vn: "Đuôi câu thân mật", note: "Có ㅏ, ㅗ -> 아요 / Tận cùng là 하다 -> 해요 / Còn lại -> 어요." },
-    { id: 'g504', level: 'TOPIK 1', lesson: 'Bài 5', type: 'grammar', kr: "장소 + 에 가다/오다", vn: "Đi / Đến đâu", note: "Chỉ hướng di chuyển ĐẾN một địa điểm." },
-    { id: 'g505', level: 'TOPIK 1', lesson: 'Bài 5', type: 'grammar', kr: "안 + V/A", vn: "Không... (Phủ định ngắn)", note: "Đứng trước động/tính từ. (Riêng với V-하다 thì chia thành: N + 안 + 하다)." },
+    // BÀI 6: Du lịch
+    { id: 'sc2_g17', level: 'TOPIK 2', lesson: 'Bài 6', type: 'grammar', kr: 'V/A 네요', vn: 'Đuôi câu cảm thán', note: '' },
+    { id: 'sc2_g18', level: 'TOPIK 2', lesson: 'Bài 6', type: 'grammar', kr: 'V 아/어 보다', vn: 'Thử làm gì đó', note: '' },
+    { id: 'sc2_g19', level: 'TOPIK 2', lesson: 'Bài 6', type: 'grammar', kr: 'V 기 전에', vn: 'Trước khi...', note: '' },
 
-    // --- BÀI 6 ---
-    { id: 'g601', level: 'TOPIK 1', lesson: 'Bài 6', type: 'grammar', kr: "N + 하고 / (이)랑", vn: "Và, cùng với", note: "Dùng trong văn nói. (이)랑: Có patchim + 이랑 / Không patchim + 랑." },
-    { id: 'g602', level: 'TOPIK 1', lesson: 'Bài 6', type: 'grammar', kr: "V + (으)ㅂ시다", vn: "Hãy cùng... (Đề nghị)", note: "Rủ rê cùng làm. Có patchim + 읍시다 / Không có patchim + ㅂ시다." },
-    { id: 'g603', level: 'TOPIK 1', lesson: 'Bài 6', type: 'grammar', kr: "V/A + 았/었/였습니다", vn: "Đã... (Quá khứ)", note: "Có ㅏ,ㅗ -> 았 / 하다 -> 였(했) / Còn lại -> 었. (Thân mật: 았/었/했어요)." },
+    // BÀI 7: Mua sắm (Tiếp)
+    { id: 'sc2_g20', level: 'TOPIK 2', lesson: 'Bài 7', type: 'grammar', kr: 'V (으)ㄴ 후에 / (으)ㄴ 다음에', vn: 'Sau khi...', note: '' },
+    { id: 'sc2_g21', level: 'TOPIK 2', lesson: 'Bài 7', type: 'grammar', kr: 'V/A 거나', vn: 'Hoặc là / hay là (Giữa 2 hành động/tính chất)', note: '' },
+    { id: 'sc2_g22', level: 'TOPIK 2', lesson: 'Bài 7', type: 'grammar', kr: 'N (이)나', vn: 'Hoặc là (1) / Những, tận, tới (Nhấn mạnh số lượng) (2)', note: '' },
 
-    // --- BÀI 7 ---
-    { id: 'g701', level: 'TOPIK 1', lesson: 'Bài 7', type: 'grammar', kr: "N + 은/는 (So sánh)", vn: "Còn N thì...", note: "Tiểu từ mang ý nghĩa nhấn mạnh, đối chiếu, so sánh giữa 2 vế." },
-    { id: 'g702', level: 'TOPIK 1', lesson: 'Bài 7', type: 'grammar', kr: "Bất quy tắc '으'", vn: "Lược bỏ '으'", note: "Khi '으' gặp nguyên âm (-아/어) -> Mất '으', chia theo nguyên âm của chữ phía trước nó." },
-    { id: 'g703', level: 'TOPIK 1', lesson: 'Bài 7', type: 'grammar', kr: "V + 고 싶다", vn: "Muốn...", note: "Ngôi thứ 1, 2: -고 싶다. Ngôi thứ 3 (nói về người khác): -고 싶어 하다." },
+    // BÀI 8: Lễ tết / Kỷ niệm
+    { id: 'sc2_g23', level: 'TOPIK 2', lesson: 'Bài 8', type: 'grammar', kr: 'V/A (으)면 좋겠다', vn: 'Nếu... thì tốt / Ước gì...', note: '' },
+    { id: 'sc2_g24', level: 'TOPIK 2', lesson: 'Bài 8', type: 'grammar', kr: 'V 기 위해서 / N 을/를 위해서', vn: 'Vì / Để / Với mục đích...', note: '' },
 
-    // --- BÀI 8 ---
-    { id: 'g801', level: 'TOPIK 1', lesson: 'Bài 8', type: 'grammar', kr: "V + 겠", vn: "Sẽ... (Ý định)", note: "Thể hiện ý chí, quyết tâm mạnh mẽ của người nói." },
-    { id: 'g802', level: 'TOPIK 1', lesson: 'Bài 8', type: 'grammar', kr: "V/A + 지 않다", vn: "Không... (Phủ định dài)", note: "Cùng nghĩa với '안' nhưng dùng trong hoàn cảnh trang trọng hơn." },
-    { id: 'g803', level: 'TOPIK 1', lesson: 'Bài 8', type: 'grammar', kr: "V + (으)세요", vn: "Hãy... (Yêu cầu/Mệnh lệnh)", note: "Có patchim + 으세요 / Không có patchim + 세요." },
+    // BÀI 9: Giải thích
+    { id: 'sc2_g25', level: 'TOPIK 2', lesson: 'Bài 9', type: 'grammar', kr: 'A 아/어 지다', vn: 'Trở nên, trở thành (Thay đổi trạng thái)', note: '' },
+    { id: 'sc2_g26', level: 'TOPIK 2', lesson: 'Bài 9', type: 'grammar', kr: 'V/A 기 때문에 / N 때문에', vn: 'Vì... nên...', note: '' },
 
-    // --- BÀI 9 ---
-    { id: 'g901', level: 'TOPIK 1', lesson: 'Bài 9', type: 'grammar', kr: "N + (으)로", vn: "Về phía, hướng...", note: "Chỉ phương hướng. Có patchim + 으로 / Không patchim hoặc patchim 'ㄹ' + 로." },
-    { id: 'g902', level: 'TOPIK 1', lesson: 'Bài 9', type: 'grammar', kr: "V + (으)ㄹ까요?", vn: "...Nhé? / ...Nhỉ?", note: "Hỏi ý kiến, rủ rê. Có patchim + 을까요? / Không có patchim + ㄹ까요?" },
-    { id: 'g903', level: 'TOPIK 1', lesson: 'Bài 9', type: 'grammar', kr: "N + 도", vn: "Cũng...", note: "Đứng sau N. Thay thế hoàn toàn cho 은/는, 이/가, 을/를." },
+    // BÀI 10: Sức khỏe
+    { id: 'sc2_g27', level: 'TOPIK 2', lesson: 'Bài 10', type: 'grammar', kr: 'V 고 있다', vn: 'Đang làm gì', note: '' },
+    { id: 'sc2_g28', level: 'TOPIK 2', lesson: 'Bài 10', type: 'grammar', kr: 'V 는 중이다', vn: 'Đang trong quá trình làm gì', note: '' },
+    { id: 'sc2_g29', level: 'TOPIK 2', lesson: 'Bài 10', type: 'grammar', kr: 'V (으)ㄴ 적이 있다/없다', vn: 'Đã từng / Chưa từng làm gì', note: '' },
 
-    // --- BÀI 10 ---
-    { id: 'g1001', level: 'TOPIK 1', lesson: 'Bài 10', type: 'grammar', kr: "N + 께서/께서는", vn: "Tiểu từ chủ ngữ (Kính ngữ)", note: "Là hình thức tôn kính của 이/가 và 은/는 (Dùng cho ông bà, bố mẹ, thầy cô...)." },
-    { id: 'g1002', level: 'TOPIK 1', lesson: 'Bài 10', type: 'grammar', kr: "V/A + (으)시", vn: "Kính ngữ của Động/Tính từ", note: "Có patchim + 으시 / Không + 시. Hiện tại chia thành: -(으)십니다 / -(으)세요." },
-    { id: 'g1003', level: 'TOPIK 1', lesson: 'Bài 10', type: 'grammar', kr: "N + (이)십니다/세요", vn: "Kính ngữ của '입니다'", note: "Mang nghĩa là 'Là...'. Dùng cho danh từ chỉ người bề trên." },
+    // BÀI 11: Sở thích (Tiếp)
+    { id: 'sc2_g30', level: 'TOPIK 2', lesson: 'Bài 11', type: 'grammar', kr: 'V (으)면서', vn: 'Vừa... vừa...', note: '' },
+    { id: 'sc2_g31', level: 'TOPIK 2', lesson: 'Bài 11', type: 'grammar', kr: 'V (으)ㄹ 것 같다 / N 인 것 같다', vn: 'Có lẽ / Chắc là / Hình như là (Phỏng đoán)', note: '' },
 
-    // --- BÀI 11 ---
-    { id: 'g1101', level: 'TOPIK 1', lesson: 'Bài 11', type: 'grammar', kr: "V/A + 고", vn: "Và, rồi, còn...", note: "Dùng để nối 2 vế câu, hoặc liệt kê hành động theo thứ tự thời gian." },
-    { id: 'g1102', level: 'TOPIK 1', lesson: 'Bài 11', type: 'grammar', kr: "시간 + 부터 ~ 까지", vn: "Từ ~ Đến (Thời gian)", note: "Chỉ điểm bắt đầu và kết thúc của một khoảng thời gian." },
-    { id: 'g1103', level: 'TOPIK 1', lesson: 'Bài 11', type: 'grammar', kr: "V + (으)ㄹ 겁니다/거예요", vn: "Sẽ... (Tương lai/Phỏng đoán)", note: "Có patchim + 을 겁니다 / Không có patchim + ㄹ 겁니다." },
-    { id: 'g1104', level: 'TOPIK 1', lesson: 'Bài 11', type: 'grammar', kr: "Bất quy tắc 'ㅂ'", vn: "'ㅂ' biến thành '우'", note: "Khi 'ㅂ' gặp nguyên âm -> 'ㅂ' mất đi và thêm '우' (Trừ 돕다, 곱다 -> 오)." },
+    // BÀI 12: Đời sống sinh hoạt
+    { id: 'sc2_g32', level: 'TOPIK 2', lesson: 'Bài 12', type: 'grammar', kr: 'V (으)ㄴ 지', vn: 'Đã bao lâu kể từ khi thực hiện hành động V', note: '' },
+    { id: 'sc2_g33', level: 'TOPIK 2', lesson: 'Bài 12', type: 'grammar', kr: 'V 기로 하다', vn: 'Quyết định làm gì', note: '' },
 
-    // --- BÀI 12 ---
-    { id: 'g1201', level: 'TOPIK 1', lesson: 'Bài 12', type: 'grammar', kr: "N + 에게/한테/께", vn: "Cho ai / Đối với ai", note: "한테: Dùng trong văn nói / 에게: Văn viết / 께: Dùng khi kính ngữ." },
-    { id: 'g1202', level: 'TOPIK 1', lesson: 'Bài 12', type: 'grammar', kr: "V + (으)ㄹ래요? / (으)ㄹ게요", vn: "...Nhé? / Sẽ...", note: "ㄹ래요: Rủ rê, hỏi ý định / ㄹ게요: Hứa hẹn, quyết tâm của bản thân." },
-    { id: 'g1203', level: 'TOPIK 1', lesson: 'Bài 12', type: 'grammar', kr: "못 + V (hoặc V + 지 못하다)", vn: "Không thể...", note: "Chỉ sự bất khả kháng, không có khả năng làm gì (Khác với 안 là không muốn làm)." },
+    // BÀI 13: Nghề nghiệp
+    { id: 'sc2_g34', level: 'TOPIK 2', lesson: 'Bài 13', type: 'grammar', kr: 'N 에 대해(서) / 에 대한 + N', vn: 'Về... / Liên quan đến...', note: '' },
+    { id: 'sc2_g35', level: 'TOPIK 2', lesson: 'Bài 13', type: 'grammar', kr: 'V 는데 / A 은/ㄴ데 / N 인데', vn: 'Nhưng / Giải thích hoàn cảnh để nối câu', note: '' },
 
-    // --- BÀI 13 ---
-    { id: 'g1301', level: 'TOPIK 1', lesson: 'Bài 13', type: 'grammar', kr: "V/A + 아/어서", vn: "Vì... Nên...", note: "Chỉ nguyên nhân kết quả. LƯU Ý: Vế sau KHÔNG ĐƯỢC dùng mệnh lệnh (세요), rủ rê (ㅂ시다)." },
+    // BÀI 14: Sự cố / Tai nạn
+    { id: 'sc2_g36', level: 'TOPIK 2', lesson: 'Bài 14', type: 'grammar', kr: 'V 자마자', vn: 'Ngay sau khi...', note: '' },
+    { id: 'sc2_g37', level: 'TOPIK 2', lesson: 'Bài 14', type: 'grammar', kr: 'V 느라고', vn: 'Vì mải mê làm gì đó... nên dẫn đến kết quả tiêu cực', note: '' },
+    { id: 'sc2_g38', level: 'TOPIK 2', lesson: 'Bài 14', type: 'grammar', kr: 'V/A 잖아요', vn: '...mà / ...còn gì (Nhắc lại điều cả hai đều biết)', note: '' },
 
-    // --- BÀI 15 ---
-    { id: 'g1501', level: 'TOPIK 1', lesson: 'Bài 15', type: 'grammar', kr: "장소 + 에서 ~ 까지", vn: "Từ ~ Đến (Địa điểm)", note: "Chỉ khoảng cách không gian từ điểm A đến điểm B." },
-    { id: 'g1502', level: 'TOPIK 1', lesson: 'Bài 15', type: 'grammar', kr: "N + (으)로 (Phương tiện)", vn: "Bằng... (Phương tiện/Cách thức)", note: "Có patchim + 으로 / Không patchim hoặc kết thúc bằng 'ㄹ' + 로." },
-    { id: 'g1503', level: 'TOPIK 1', lesson: 'Bài 15', type: 'grammar', kr: "V + (으)러 가다/오다", vn: "Đi / Đến để làm gì", note: "Chỉ mục đích của sự di chuyển. Có patchim + 으러 / Không có patchim + 러." },
+    // BÀI 15: Dự định tương lai
+    { id: 'sc2_g39', level: 'TOPIK 2', lesson: 'Bài 15', type: 'grammar', kr: 'V 을/ㄹ 줄 알다/모르다', vn: 'Biết / Không biết làm hành động V', note: '' },
+    { id: 'sc2_g40', level: 'TOPIK 2', lesson: 'Bài 15', type: 'grammar', kr: 'V 고 나서', vn: 'Sau khi làm xong cái gì... rồi thì...', note: '' },
+    { id: 'sc2_g41', level: 'TOPIK 2', lesson: 'Bài 15', type: 'grammar', kr: 'V 다가', vn: 'Đang làm hành động này... thì đột ngột chuyển sang hành động khác', note: '' },
 
     // ==========================================
     // BÀI 1: 입니다 / 입니까? 

@@ -164,23 +164,24 @@ function renderCards(cards) {
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                         ${starHTML}
-                        <div class="${frontClass}">${frontText} ${speakerFront}</div>
+                        <div class="${frontClass === 'kr-text' ? 'korean-text' : ''} ${frontClass}">${frontText} ${speakerFront}</div>
                     </div>
                     <div class="flip-card-back">
-                        <div class="${backClass}">${backText} ${speakerBack}</div>
+                        <div class="${backClass === 'kr-text' ? 'korean-text' : ''} ${backClass}">${backText} ${speakerBack}</div>
                         ${backNote}
                     </div>
-                </div>`;
+                </div>
+            `;
         } else {
             // CHẾ ĐỘ HIỂN THỊ THƯỜNG
             if (card.type === 'grammar') {
                 div.innerHTML = starHTML + `
-                    <div class="kr-text text-start mb-2">${card.kr} ${speakerHTML}</div>
+                    <div class="korean-text kr-text text-start mb-2">${card.kr} ${speakerHTML}</div>
                     <div class="vn-text text-start fw-bold mb-2">${card.vn}</div>
                     ${card.note ? `<div class="card-note text-start small text-muted border-top pt-2"><i class="fi fi-rr-info me-1"></i>${card.note}</div>` : ''}`;
             } else {
                 div.innerHTML = starHTML + `
-                    <div class="kr-text mb-1">${card.kr} ${speakerHTML}</div>
+                    <div class="korean-text kr-text mb-1">${card.kr} ${speakerHTML}</div>
                     <div class="vn-text text-muted small">${card.vn || ''}</div>`;
             }
         }
