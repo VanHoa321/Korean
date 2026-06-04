@@ -13,7 +13,7 @@ var data = [
     { id: 'sc1_g7', level: 'TOPIK 1', type: 'grammar', kr: 'V/A ㅂ/습니다 / ㅂ/습니까', vn: 'Đuôi câu trần thuật / nghi vấn (Trang trọng)', note: '' },
     { id: 'sc1_g2', level: 'TOPIK 1', type: 'grammar', kr: 'N이/가 + A', vn: 'N thì (tính từ)', note: '' },
 
-    { id: 'sc1_g3', level: 'TOPIK 1', type: 'grammar', kr: 'N1 와/과 하고 N2', vn: 'N1 và N2', note: '' },
+    { id: 'sc1_g3', level: 'TOPIK 1', type: 'grammar', kr: 'N1 와/과/하고 N2', vn: 'N1 và N2', note: '' },
     { id: 'sc1_g9', level: 'TOPIK 1', type: 'grammar', kr: 'N와/과/하고/(이)랑 (함께/같이) + V', vn: 'Làm V cùng với N', note: '' },
     { id: 'sc1_g11', level: 'TOPIK 1', type: 'grammar', kr: 'Ntg 에', vn: 'Vào (thời điểm)', note: '' },
 
