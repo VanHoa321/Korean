@@ -113,6 +113,10 @@ var data = [
 
     { id: 'sc2_g30', level: 'TOPIK 2', type: 'grammar', kr: 'V (으)면서', vn: 'Vừa... vừa... (Làm này làm kia)', note: '' },
     { id: 'sc2_g31', level: 'TOPIK 2', type: 'grammar', kr: 'V (으)ㄹ 것 같다 / N 인 것 같다', vn: 'Có vẻ, Hình như là', note: '' },
+    { id: 'sc2_g33', level: 'TOPIK 2', type: 'grammar', kr: 'A/V 게 되다', vn: 'Được, bị, trở nên', note: '' },
+
+    { id: 'sc2_g34', level: 'TOPIK 2', type: 'grammar', kr: 'V 기 쉽다', vn: 'Dễ làm V', note: '' },
+    { id: 'sc2_g35', level: 'TOPIK 2', type: 'grammar', kr: 'V (으)려면', vn: 'Nếu muốn, để muốn', note: '' },
 
     { id: 'sc2_g32', level: 'TOPIK 2', type: 'grammar', kr: 'V (으)ㄴ 지', vn: 'Từ khi ... (kể từ lúc)', note: '' },
     { id: 'sc2_g33', level: 'TOPIK 2', type: 'grammar', kr: 'V 기로 하다', vn: 'Quyết định làm gì', note: '' },
