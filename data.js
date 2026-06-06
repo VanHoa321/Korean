@@ -15,15 +15,13 @@ var data = [
 
     { id: 'sc1_g3', level: 'TOPIK 1', type: 'grammar', kr: 'N1 와/과/하고 N2', vn: 'N1 và N2', note: '' },
     { id: 'sc1_g9', level: 'TOPIK 1', type: 'grammar', kr: 'N와/과/하고/(이)랑 (함께/같이) + V', vn: 'Làm V cùng với N', note: '' },
-    { id: 'sc1_g11', level: 'TOPIK 1', type: 'grammar', kr: 'Ntg 에', vn: 'Vào (thời điểm)', note: '' },
 
     { id: 'sc1_g15', level: 'TOPIK 1', type: 'grammar', kr: 'N이에요/예요', vn: 'Là N (đuôi câu thân mật)', note: '' },
     { id: 'sc1_g14', level: 'TOPIK 1', type: 'grammar', kr: 'V/A 아/어요', vn: 'V/A Đuôi câu thân mật', note: '' },
     { id: 'sc1_g16', level: 'TOPIK 1', type: 'grammar', kr: 'N이/가 아니에요', vn: 'Không phải là N (đuôi câu thân mật)', note: '' },
-    { id: 'sc1_g15', level: 'TOPIK 1', type: 'grammar', kr: 'N에 Vdc', vn: 'Di chuyển tới N', note: '' },
     { id: 'sc1_g16', level: 'TOPIK 1', type: 'grammar', kr: '안 + V/A = V/A 지 않다', vn: 'Không V/A', note: '' },
 
-    { id: 'sc1_g13', level: 'TOPIK 1', type: 'grammar', kr: 'N이었어요/였어요', vn: 'Đã là N (thì quá khứ)', note: '' },
+    { id: 'sc1_g13', level: 'TOPIK 1', type: 'grammar', kr: 'N이었다/였다', vn: 'Đã là N (thì quá khứ)', note: '' },
     { id: 'sc1_g12', level: 'TOPIK 1', type: 'grammar', kr: 'V/A 았다/었다', vn: 'Đã (Thì quá khứ)', note: '' },
     { id: 'sc1_g17', level: 'TOPIK 1', type: 'grammar', kr: 'N이/가 아니었다', vn: 'Đã không phải là N', note: '' },
 
@@ -2950,7 +2948,6 @@ var data = [
     { id: 'p59', level: 'TOPIK 2', type: 'personal', lesson: 'Từ luyện đề', vn: "Vạch, gạch", kr: "긋다" },
     { id: 'p60', level: 'TOPIK 2', type: 'personal', lesson: 'Từ luyện đề', vn: "Sưng tấy", kr: "붓다" },
     { id: 'p61', level: 'TOPIK 2', type: 'personal', lesson: 'Từ luyện đề', vn: "Khóc", kr: "울다" },
-    { id: 'p62', level: 'TOPIK 2', type: 'personal', lesson: 'Từ luyện đề', vn: "Bỏ", kr: "넣다" },
     { id: 'p63', level: 'TOPIK 2', type: 'personal', lesson: 'Từ luyện đề', vn: "Đặt, để", kr: "놓다" },
     { id: 'p64', level: 'TOPIK 2', type: 'personal', lesson: 'Từ luyện đề', vn: "Đường", kr: "설탕" },
     { id: 'p65', level: 'TOPIK 2', type: 'personal', lesson: 'Từ luyện đề', vn: "Lớn lên", kr: "태어나다" },
