@@ -11,6 +11,7 @@ var isReverseLang = false;
 window.onload = function () {
     renderLessonButtons(); 
     filterCards();      
+    initBackToTop(); // Khởi tạo tính năng cuộn lên đầu trang
 };
 
 function renderLessonButtons() {
@@ -60,14 +61,43 @@ function setLevel(level, btn) {
 function setCategory(cat, btn) {
     currentCat = cat;
     updateActiveButton(btn);
+    
     const lessonSection = document.getElementById('lesson-buttons').parentElement;
-
     if (currentCat === 'grammar' || currentCat === 'personal') {
         lessonSection.style.display = 'none';
         currentLes = 'All';
     } else {
         lessonSection.style.display = 'flex';
     }
+
+    // Xử lý thay đổi giao diện Nút Cấp Học
+    const levelContainer = document.getElementById('level-buttons');
+    if (levelContainer) {
+        if (currentCat === 'grammar') {
+            // Khi chọn Ngữ pháp: Hiển thị 3 mục Sơ - Trung - Cao
+            levelContainer.innerHTML = `
+                <span class="fw-bold text-theme small me-2"><i class="fi fi-rr-layers me-1"></i>CẤP HỌC</span>
+                <button class="btn btn-theme btn-sm rounded-pill filter-btn active" onclick="setLevel('Sơ cấp', this)">Sơ cấp</button>
+                <button class="btn btn-theme-outline btn-sm rounded-pill filter-btn" onclick="setLevel('Trung cấp', this)">Trung cấp</button>
+                <button class="btn btn-theme-outline btn-sm rounded-pill filter-btn" onclick="setLevel('Cao cấp', this)">Cao cấp</button>
+            `;
+            currentLevel = 'Sơ cấp'; // Reset về Sơ cấp mặc định cho ngữ pháp
+        } else {
+            // Khi chọn các mục khác: Quay về hiển thị 6 mục TOPIK như cũ
+            levelContainer.innerHTML = `
+                <span class="fw-bold text-theme small me-2"><i class="fi fi-rr-layers me-1"></i>CẤP HỌC</span>
+                <button class="btn btn-theme btn-sm rounded-pill filter-btn active" onclick="setLevel('TOPIK 1', this)">SC 1</button>
+                <button class="btn btn-theme-outline btn-sm rounded-pill filter-btn" onclick="setLevel('TOPIK 2', this)">SC 2</button>
+                <button class="btn btn-theme-outline btn-sm rounded-pill filter-btn" onclick="setLevel('TOPIK 3', this)">TC 3</button>
+                <button class="btn btn-theme-outline btn-sm rounded-pill filter-btn" onclick="setLevel('TOPIK 4', this)">TC 4</button>
+                <button class="btn btn-theme-outline btn-sm rounded-pill filter-btn" onclick="setLevel('TOPIK 5', this)">CC 5</button>
+                <button class="btn btn-theme-outline btn-sm rounded-pill filter-btn" onclick="setLevel('TOPIK 6', this)">CC 6</button>
+            `;
+            currentLevel = 'TOPIK 1'; // Reset về TOPIK 1 mặc định cho từ vựng
+        }
+    }
+
+    renderLessonButtons();
     filterCards();
 }
 
@@ -99,6 +129,7 @@ function filterCards() {
     var keyword = document.getElementById('searchInput').value.toLowerCase().trim();
 
     var filtered = data.filter(i => {
+        // Kiểm tra logic lọc theo cấp độ học
         let passLevel = (i.level === currentLevel);
 
         let passCat = false;
@@ -203,7 +234,6 @@ function renderCards(cards) {
 // CÁC HÀM TIỆN ÍCH & HỆ THỐNG PHÁT ÂM
 // ==========================================
 
-// Xử lý bật/tắt Đánh dấu từ khó (Lưu trữ lâu dài qua localStorage)
 function toggleStar(cardId, event, iconElement) {
     event.stopPropagation();
     let index = starredCards.indexOf(cardId);
@@ -223,7 +253,6 @@ function toggleStar(cardId, event, iconElement) {
     localStorage.setItem('myStarredCards', JSON.stringify(starredCards));
 }
 
-// Trình đọc phát âm tiếng Hàn (Text-to-Speech chuẩn hóa)
 function speakKorean(text, event) {
     if (event) event.stopPropagation();
     if ('speechSynthesis' in window) {
@@ -255,7 +284,6 @@ function speakKorean(text, event) {
     }
 }
 
-// Bật - tắt chế độ lật Flashcard
 function toggleFlashcardMode(btn) {
     isFlashcard = true;
     isQuiz = false;
@@ -295,8 +323,28 @@ function toggleWriteMode(btn) {
     filterCards();
 }
 
-// Đảo mặt hiển thị ngôn ngữ Flashcard (Hàn - Việt)
 function toggleLangDirection() {
     isReverseLang = document.getElementById('langToggle').checked;
     filterCards();
+}
+
+// Logic Nút cuộn lên đầu trang 
+function initBackToTop() {
+    const btn = document.getElementById('backToTopBtn');
+    if (!btn) return;
+
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+            btn.classList.add('show'); 
+        } else {
+            btn.classList.remove('show'); 
+        }
+    });
+
+    btn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' 
+        });
+    });
 }

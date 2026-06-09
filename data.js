@@ -1,135 +1,114 @@
 var data = [
 
-    // ==========================================
-    // SƠ CẤP 1
-    // ==========================================
+    { id: 'sc_1', level: 'Sơ cấp', type: 'grammar', kr: 'N 입니다 / 입니까?', vn: 'Là N / Là N phải không? (Trang trọng)', note: '' },
+    { id: 'sc_2', level: 'Sơ cấp', type: 'grammar', kr: 'N 이/가 아닙니다', vn: 'Không phải là N', note: '' },
+    { id: 'sc_3', level: 'Sơ cấp', type: 'grammar', kr: 'V/A ㅂ/습니다 / ㅂ/습니까', vn: 'Đuôi câu trần thuật / nghi vấn (Trang trọng)', note: '' },
+
+    { id: 'sc_4', level: 'Sơ cấp', type: 'grammar', kr: 'N이/가 + A', vn: 'N thì (tính từ)', note: '' },
+
+    { id: 'sc_5', level: 'Sơ cấp', type: 'grammar', kr: 'N1 와/과/하고/(이)랑 N2', vn: 'N1 và N2', note: '' },
+    { id: 'sc_6', level: 'Sơ cấp', type: 'grammar', kr: 'N와/과/하고/(이)랑 (함께/같이) + V', vn: 'Làm V cùng với N', note: '' },
+    { id: 'sc_7', level: 'Sơ cấp', type: 'grammar', kr: 'V/A 고', vn: 'Và, rồi (nối câu)', note: '' },
+
+    { id: 'sc_8', level: 'Sơ cấp', type: 'grammar', kr: 'N이에요/예요', vn: 'Là N (đuôi câu thân mật)', note: '' },
+    { id: 'sc_9', level: 'Sơ cấp', type: 'grammar', kr: 'V/A 아/어요', vn: 'V/A (đuôi câu thân mật)', note: '' },
+    { id: 'sc_10', level: 'Sơ cấp', type: 'grammar', kr: 'N이/가 아니에요', vn: 'Không phải là N (đuôi câu thân mật)', note: '' },
+
+    { id: 'sc_11', level: 'Sơ cấp', type: 'grammar', kr: 'N이었다/였다', vn: 'Đã là N (thì quá khứ)', note: '' },
+    { id: 'sc_12', level: 'Sơ cấp', type: 'grammar', kr: 'V/A 았다/었다', vn: 'Đã V/A (thì quá khứ)', note: '' },
+    { id: 'sc_13', level: 'Sơ cấp', type: 'grammar', kr: 'N이/가 아니었다', vn: 'Đã không phải là N', note: '' },
+    { id: 'sc_14', level: 'Sơ cấp', type: 'grammar', kr: '안 + V/A = V/A 지 않다', vn: 'Không V/A', note: '' },
+
+    { id: 'sc_15', level: 'Sơ cấp', type: 'grammar', kr: 'V (으)ㅂ시다', vn: 'Hãy cùng làm V (gần như quyết định)', note: '' },
+    { id: 'sc_16', level: 'Sơ cấp', type: 'grammar', kr: 'V (으)ㄹ래요?', vn: 'Nhé, Nhỉ? (Hỏi ý kiến)', note: '' },
+    { id: 'sc_17', level: 'Sơ cấp', type: 'grammar', kr: 'V (으)ㄹ까요?', vn: 'Nhé, nhỉ? (Đề nghị, gợi ý)', note: '' },
+
+    { id: 'sc_18', level: 'Sơ cấp', type: 'grammar', kr: 'V 고 싶다', vn: 'Muốn làm V (Ngôi 1, 2)', note: '' },
+    { id: 'sc_19', level: 'Sơ cấp', type: 'grammar', kr: 'V 고 싶어하다', vn: 'Muốn làm V (Ngôi thứ 3)', note: '' },
+
+    { id: 'sc_20', level: 'Sơ cấp', type: 'grammar', kr: 'V 겠다', vn: 'Sẽ V (Ý định/Phỏng đoán)', note: '' },
+    { id: 'sc_21', level: 'Sơ cấp', type: 'grammar', kr: 'V/A (으)ㄹ 거예요', vn: 'Sẽ (tương lai), phỏng đoán', note: '' },
+    { id: 'sc_22', level: 'Sơ cấp', type: 'grammar', kr: 'V (으)ㄹ게요', vn: 'Sẽ V (hứa hẹn, quyết tâm)', note: '' },
+
+    { id: 'sc_23', level: 'Sơ cấp', type: 'grammar', kr: 'N (이)라서', vn: 'Vì là N', note: '' },
+    { id: 'sc_24', level: 'Sơ cấp', type: 'grammar', kr: 'V/A 아/어/해 서', vn: 'Vì ... nên ..., rồi', note: '' },
+    { id: 'sc_25', level: 'Sơ cấp', type: 'grammar', kr: 'V/A (으)니까 / N (이)니까', vn: 'Vì ... nên (lý do/căn cứ)', note: '' },
+    { id: 'sc_26', level: 'Sơ cấp', type: 'grammar', kr: 'V/A기 때문에 / N 때문에', vn: 'Vì ... nên ...', note: '' },
+
+    { id: 'sc_27', level: 'Sơ cấp', type: 'grammar', kr: 'V (으)세요', vn: 'Hãy, xin mời (yêu cầu/đề nghị)', note: '' },
+    { id: 'sc_28', level: 'Sơ cấp', type: 'grammar', kr: 'N 도', vn: 'Cũng ', note: '' },
+    { id: 'sc_29', level: 'Sơ cấp', type: 'grammar', kr: 'V/A 지만', vn: 'Nhưng', note: '' },
+    { id: 'sc_30', level: 'Sơ cấp', type: 'grammar', kr: 'N1 의 N2', vn: 'N2 của N1', note: '' },
+    { id: 'sc_31', level: 'Sơ cấp', type: 'grammar', kr: 'N 마다', vn: 'Mỗi N', note: '' },
+    { id: 'sc_32', level: 'Sơ cấp', type: 'grammar', kr: 'N은/는', vn: 'Tiểu từ đặc biệt (thì) (So sánh, đối chiếu)', note: '' },
+
+    { id: 'sc_33', level: 'Sơ cấp', type: 'grammar', kr: 'N 만', vn: 'Chỉ N', note: '' },
+    { id: 'sc_34', level: 'Sơ cấp', type: 'grammar', kr: 'N밖에 + phủ định', vn: 'Chỉ, ngoài N ra không...', note: '' },
+
+    { id: 'sc_35', level: 'Sơ cấp', type: 'grammar', kr: '께서 / 께서는', vn: 'Tiểu từ chủ ngữ kính ngữ', note: '' },
+    { id: 'sc_36', level: 'Sơ cấp', type: 'grammar', kr: 'N(이)시다', vn: 'Là N (kính ngữ)', note: '' },
+    { id: 'sc_37', level: 'Sơ cấp', type: 'grammar', kr: 'V(으)시다', vn: 'Đuôi câu kính ngữ', note: '' },
+
+    { id: 'sc_38', level: 'Sơ cấp', type: 'grammar', kr: 'N(으)로', vn: 'Về hướng (N địa điểm), Bằng (N vật, phương tiện)', note: '' },
+    { id: 'sc_39', level: 'Sơ cấp', type: 'grammar', kr: '...부터 ...까지', vn: 'Từ ... đến ... (thời gian)', note: '' },
+    { id: 'sc_40', level: 'Sơ cấp', type: 'grammar', kr: '...에서 ...까지', vn: 'Từ ... đến ... (địa điểm)', note: '' },
+
+    { id: 'sc_41', level: 'Sơ cấp', type: 'grammar', kr: '에게/한테/께', vn: 'Cho, tới, gửi tới (ai đó)', note: '' },
+    { id: 'sc_42', level: 'Sơ cấp', type: 'grammar', kr: '에게서/한테서', vn: 'Từ (ai đó)', note: '' },
+
+    { id: 'sc_43', level: 'Sơ cấp', type: 'grammar', kr: 'V (으)려고 하다', vn: 'Định làm V', note: '' },
+    { id: 'sc_44', level: 'Sơ cấp', type: 'grammar', kr: 'V (으)려고', vn: 'Để V', note: '' },
+
+    { id: 'sc_45', level: 'Sơ cấp', type: 'grammar', kr: '못 V / V지 못하다', vn: 'Không thể (do năng lực/hoàn cảnh)', note: '' },
+
+    { id: 'sc_46', level: 'Sơ cấp', type: 'grammar', kr: 'V/A (으)ㄹ 수 있다/없다', vn: 'Có thể / Không thể làm V', note: '' },
+    { id: 'sc_47', level: 'Sơ cấp', type: 'grammar', kr: 'V 기/는 것', vn: 'Việc V (Danh từ hóa)', note: '' },
+    { id: 'sc_48', level: 'Sơ cấp', type: 'grammar', kr: 'V (으)러 가다/오다', vn: 'Đi / Đến để làm V', note: '' },
+    { id: 'sc_49', level: 'Sơ cấp', type: 'grammar', kr: 'V/A (으)ㄹ 때 / N 때', vn: 'Khi, lúc', note: '' },
+    { id: 'sc_50', level: 'Sơ cấp', type: 'grammar', kr: 'V (으)ㄴ 지', vn: 'Từ khi ... (kể từ lúc)', note: '' },
+    { id: 'sc_51', level: 'Sơ cấp', type: 'grammar', kr: 'V(으)ㄴ 지 + 시간 + 되다', vn: 'Đã bao lâu kể từ khi làm V', note: '' },
+
+    { id: 'sc_52', level: 'Sơ cấp', type: 'grammar', kr: 'V 아/어/해 주다', vn: 'Làm gì đó cho ai', note: '' },
+    { id: 'sc_53', level: 'Sơ cấp', type: 'grammar', kr: 'V 아/어/해도 되다', vn: 'Làm V thì được', note: '' },
+    { id: 'sc_54', level: 'Sơ cấp', type: 'grammar', kr: 'V 아/어/해 보다', vn: 'Thử làm V', note: '' },
+    { id: 'sc_55', level: 'Sơ cấp', type: 'grammar', kr: 'V 아/어/해 야 하다/되다', vn: 'Phải làm V', note: '' },
+    { id: 'sc_56', level: 'Sơ cấp', type: 'grammar', kr: 'A 아/어/해 지다', vn: 'Trở nên A', note: '' },
+
+    { id: 'sc_57', level: 'Sơ cấp', type: 'grammar', kr: 'V/A (으)면', vn: 'Nếu làm V', note: '' },
+    { id: 'sc_58', level: 'Sơ cấp', type: 'grammar', kr: 'V (으)면 안 되다', vn: 'Nếu làm V thì không được', note: '' },
+    { id: 'sc_59', level: 'Sơ cấp', type: 'grammar', kr: 'V/A (으)면 좋겠다', vn: 'Ước gì, Nếu làm V/A thì tốt', note: '' },
+    { id: 'sc_60', level: 'Sơ cấp', type: 'grammar', kr: 'V (으)면서', vn: 'Vừa... vừa... (Làm này làm kia)', note: '' },
+    { id: 'sc_61', level: 'Sơ cấp', type: 'grammar', kr: 'V (으)려면', vn: 'Nếu muốn, để muốn', note: '' },
     
-    { id: 'sc1_g1', level: 'TOPIK 1', type: 'grammar', kr: 'N 은/는', vn: 'Tiểu từ chủ đề', note: '' },
-    { id: 'sc1_g1', level: 'TOPIK 1', type: 'grammar', kr: 'N 이/가', vn: 'Tiểu từ chủ ngữ', note: '' },
-    { id: 'sc1_g9', level: 'TOPIK 1', type: 'grammar', kr: 'N 을/를', vn: 'Tiểu từ tân ngữ', note: '' },
-    { id: 'sc1_g1', level: 'TOPIK 1', type: 'grammar', kr: 'N 입니다 / 입니까?', vn: 'Là N / Là N phải không? (Trang trọng)', note: '' },
-    { id: 'sc1_g4', level: 'TOPIK 1', type: 'grammar', kr: 'N 이/가 아닙니다', vn: 'Không phải là N', note: '' },
-
-    { id: 'sc1_g7', level: 'TOPIK 1', type: 'grammar', kr: 'V/A ㅂ/습니다 / ㅂ/습니까', vn: 'Đuôi câu trần thuật / nghi vấn (Trang trọng)', note: '' },
-    { id: 'sc1_g2', level: 'TOPIK 1', type: 'grammar', kr: 'N이/가 + A', vn: 'N thì (tính từ)', note: '' },
-
-    { id: 'sc1_g3', level: 'TOPIK 1', type: 'grammar', kr: 'N1 와/과/하고 N2', vn: 'N1 và N2', note: '' },
-    { id: 'sc1_g9', level: 'TOPIK 1', type: 'grammar', kr: 'N와/과/하고/(이)랑 (함께/같이) + V', vn: 'Làm V cùng với N', note: '' },
-
-    { id: 'sc1_g15', level: 'TOPIK 1', type: 'grammar', kr: 'N이에요/예요', vn: 'Là N (đuôi câu thân mật)', note: '' },
-    { id: 'sc1_g14', level: 'TOPIK 1', type: 'grammar', kr: 'V/A 아/어요', vn: 'V/A Đuôi câu thân mật', note: '' },
-    { id: 'sc1_g16', level: 'TOPIK 1', type: 'grammar', kr: 'N이/가 아니에요', vn: 'Không phải là N (đuôi câu thân mật)', note: '' },
-    { id: 'sc1_g16', level: 'TOPIK 1', type: 'grammar', kr: '안 + V/A = V/A 지 않다', vn: 'Không V/A', note: '' },
-
-    { id: 'sc1_g13', level: 'TOPIK 1', type: 'grammar', kr: 'N이었다/였다', vn: 'Đã là N (thì quá khứ)', note: '' },
-    { id: 'sc1_g12', level: 'TOPIK 1', type: 'grammar', kr: 'V/A 았다/었다', vn: 'Đã (Thì quá khứ)', note: '' },
-    { id: 'sc1_g17', level: 'TOPIK 1', type: 'grammar', kr: 'N이/가 아니었다', vn: 'Đã không phải là N', note: '' },
-
-    { id: 'sc1_g18', level: 'TOPIK 1', type: 'grammar', kr: 'V (으)ㅂ시다', vn: 'Hãy cùng làm V (gần như quyết định)', note: '' },
-    { id: 'sc1_g19', level: 'TOPIK 1', type: 'grammar', kr: 'V 고 싶다', vn: 'Muốn làm V (Ngôi 1, 2)', note: '' },
-    { id: 'sc1_g20', level: 'TOPIK 1', type: 'grammar', kr: 'V 고 싶어하다', vn: 'Muốn làm V (Ngôi thứ 3)', note: '' },
-
-    { id: 'sc1_g24', level: 'TOPIK 1', type: 'grammar', kr: 'V 겠다', vn: 'Sẽ V (Ý định/Phỏng đoán)', note: '' },
-
-    { id: 'sc1_g21', level: 'TOPIK 1', type: 'grammar', kr: 'V (으)세요', vn: 'Hãy, xin mời (yêu cầu/đề nghị)', note: '' },
-    { id: 'sc1_g25', level: 'TOPIK 1', type: 'grammar', kr: 'V (으)ㄹ래요?', vn: 'Nhé, Nhỉ? (Hỏi ý kiến)', note: '' },
-    { id: 'sc1_g22', level: 'TOPIK 1', type: 'grammar', kr: 'N 도', vn: 'Cũng ', note: '' },
-    { id: 'sc1_g23', level: 'TOPIK 1', type: 'grammar', kr: 'N 만', vn: 'Chỉ N', note: '' },
-
-    { id: 'sc1_g28', level: 'TOPIK 1', type: 'grammar', kr: '께서 / 께서는', vn: 'Tiểu từ chủ ngữ kính ngữ', note: '' },
-    { id: 'sc1_g28', level: 'TOPIK 1', type: 'grammar', kr: 'N(이)시다', vn: 'Là N (kính ngữ)', note: '' },
-    { id: 'sc1_g27', level: 'TOPIK 1', type: 'grammar', kr: 'V(으)시다', vn: 'Đuôi câu kính ngữ', note: '' },
-    { id: 'sc1_g26', level: 'TOPIK 1', type: 'grammar', kr: 'N(으)로', vn: 'Về hướng (N địa điểm), Bằng (N vật, phương tiện)', note: '' },
-
-    { id: 'sc1_g29', level: 'TOPIK 1', type: 'grammar', kr: 'V/A 고', vn: 'Và, rồi (nối câu)', note: '' },
-    { id: 'sc1_g30', level: 'TOPIK 1', type: 'grammar', kr: 'N은/는', vn: 'Tiểu từ đặc biệt (thì) (So sánh, đối chiếu)', note: '' },
-
-    { id: 'sc1_g31', level: 'TOPIK 1', type: 'grammar', kr: '...부터 ...까지', vn: 'Từ ... đến ... (thời gian)', note: '' },
-    { id: 'sc1_g32', level: 'TOPIK 1', type: 'grammar', kr: '...에서 ...까지', vn: 'Từ ... đến ... (địa điểm)', note: '' },
-    { id: 'sc1_g33', level: 'TOPIK 1', type: 'grammar', kr: 'V/A (으)ㄹ 거예요', vn: 'Sẽ (tương lai), phỏng đoán', note: '' },
-
-    { id: 'sc1_g34', level: 'TOPIK 1', type: 'grammar', kr: '에게/한테/께', vn: 'Cho, tới, gửi tới (ai đó)', note: '' },
-    { id: 'sc1_g35', level: 'TOPIK 1', type: 'grammar', kr: '에게서/한테서', vn: 'Từ (ai đó)', note: '' },
-    { id: 'sc1_g36', level: 'TOPIK 1', type: 'grammar', kr: 'V/A 지만', vn: 'Nhưng', note: '' },
-
-    { id: 'sc1_g37', level: 'TOPIK 1', type: 'grammar', kr: 'V (으)려고 하다', vn: 'Định làm V', note: '' },
-    { id: 'sc2_g15', level: 'TOPIK 2', type: 'grammar', kr: 'V (으)려고', vn: 'Để V', note: '' },
-    { id: 'sc1_g38', level: 'TOPIK 1', type: 'grammar', kr: 'N (이)라서', vn: 'Vì là N', note: '' },
-    { id: 'sc1_g39', level: 'TOPIK 1', type: 'grammar', kr: 'V/A 아/어/해 서', vn: 'Vì ... nên ..., rồi', note: '' },
-
-    { id: 'sc1_g40', level: 'TOPIK 1', type: 'grammar', kr: 'V (으)ㄹ까요?', vn: 'Nhé, nhỉ? (Đề nghị, gợi ý)', note: '' },
-    { id: 'sc1_g41', level: 'TOPIK 1', type: 'grammar', kr: '못 V / V지 못하다', vn: 'Không thể (do năng lực/hoàn cảnh)', note: '' },
-    { id: 'sc1_g42', level: 'TOPIK 1', type: 'grammar', kr: 'V/A (으)ㄹ 수 있다/없다', vn: 'Có thể / Không thể làm V', note: '' },
-
-    { id: 'sc1_g43', level: 'TOPIK 1', type: 'grammar', kr: 'V 기/는 것', vn: 'Việc V (Danh từ hóa)', note: '' },
-    { id: 'sc1_g44', level: 'TOPIK 1', type: 'grammar', kr: 'V (으)러 가다/오다', vn: 'Đi / Đến để làm V', note: '' },
-    { id: 'sc1_g45', level: 'TOPIK 1', type: 'grammar', kr: 'N1 의 N2', vn: 'N2 của N1', note: '' },
-
-    // ==========================================
-    // SƠ CẤP 2
-    // ==========================================
-
-    { id: 'sc2_g1', level: 'TOPIK 2', type: 'grammar', kr: 'V/A (으)ㄹ 때 / N 때', vn: 'Khi, lúc', note: '' },
-    { id: 'sc2_g2', level: 'TOPIK 2', type: 'grammar', kr: 'V 아/어/해 주다', vn: 'Làm gì đó cho ai', note: '' },
-    { id: 'sc2_g3', level: 'TOPIK 2', type: 'grammar', kr: 'V/A (으)니까 / N (이)니까', vn: 'Vì ... nên (lý do/căn cứ)', note: '' },
-
-    { id: 'sc1_g29', level: 'TOPIK 1', type: 'grammar', kr: 'N밖에 + phủ định', vn: 'Chỉ, ngoài N ra không...', note: '' },
-    { id: 'sc2_g4', level: 'TOPIK 2', type: 'grammar', kr: 'V 지 말다', vn: 'Đừng làm V', note: '' },
-    { id: 'sc2_g5', level: 'TOPIK 2', type: 'grammar', kr: 'V 아/어/해도 되다', vn: 'Được phép làm V, làm V thì được', note: '' },
-    { id: 'sc2_g14', level: 'TOPIK 2', type: 'grammar', kr: 'V (으)면 안 되다', vn: 'Nếu làm V thì không được', note: '' },
-    { id: 'sc2_g6', level: 'TOPIK 2', type: 'grammar', kr: 'N 보다 / N 에 비해서', vn: 'So với N', note: '' },
-
-    { id: 'sc2_g8', level: 'TOPIK 2', type: 'grammar', kr: 'V (으)ㄴ N', vn: 'Định ngữ động từ (quá khứ)', note: '' },
-    { id: 'sc2_g9', level: 'TOPIK 2', type: 'grammar', kr: 'V 는 N', vn: 'Định ngữ động từ (hiện tại)', note: '' },
-    { id: 'sc2_g10', level: 'TOPIK 2', type: 'grammar', kr: 'V (으)ㄹ N', vn: 'Định ngữ động từ (tương lai)', note: '' },
-    { id: 'sc2_g7', level: 'TOPIK 2', type: 'grammar', kr: 'A (으)ㄴ N', vn: 'Định ngữ tính từ (hiện tại)', note: '' },
-
-    { id: 'sc2_g11', level: 'TOPIK 2', type: 'grammar', kr: 'N 마다', vn: 'Mỗi N', note: '' },
-    { id: 'sc2_g12', level: 'TOPIK 2', type: 'grammar', kr: 'V 아/어/해 야 하다/되다', vn: 'Phải làm V', note: '' },
-    { id: 'sc2_g13', level: 'TOPIK 2', type: 'grammar', kr: 'V/A (으)면', vn: 'Nếu làm V', note: '' },
-
-    { id: 'sc2_g14', level: 'TOPIK 2', lesson: 'Bài 5', type: 'grammar', kr: 'V/A 지요? (죠?)', vn: 'Đúng không (xác nhận lại)', note: '' },
-    { id: 'sc2_g16', level: 'TOPIK 2', lesson: 'Bài 5', type: 'grammar', kr: 'V (으)ㄹ게요', vn: 'Sẽ V (hứa hẹn, quyết tâm)', note: '' },
-
-    { id: 'sc2_g17', level: 'TOPIK 2', type: 'grammar', kr: 'V/A 네요', vn: 'Cảm thán (ngạc nhiên, đồng tình)', note: '' },
-    { id: 'sc2_g18', level: 'TOPIK 2', type: 'grammar', kr: 'V 아/어/해 보다', vn: 'Thử làm V', note: '' },
-    { id: 'sc2_g19', level: 'TOPIK 2', type: 'grammar', kr: 'V기 전에', vn: 'Trước khi làm gì', note: '' },
-    { id: 'sc2_g20', level: 'TOPIK 2', type: 'grammar', kr: 'V (으)ㄴ 후에 / 다음에', vn: 'Sau khi làm gì', note: '' },
-
-    { id: 'sc2_g21', level: 'TOPIK 2', type: 'grammar', kr: 'V/A 거나', vn: 'Hoặc là', note: '' },
-    { id: 'sc2_g22', level: 'TOPIK 2', type: 'grammar', kr: 'N (이)나', vn: 'Hoặc N, Tận (nhấn mạnh số lượng)', note: '' },
-
-    { id: 'sc2_g23', level: 'TOPIK 2', type: 'grammar', kr: 'V/A (으)면 좋겠다', vn: 'Ước gì, Nếu làm V/A thì tốt', note: '' },
-    { id: 'sc2_g24', level: 'TOPIK 2', type: 'grammar', kr: 'V기 위해서 / N 을/를 위해서', vn: 'Để (mục đích)', note: '' },
-
-    { id: 'sc2_g25', level: 'TOPIK 2', type: 'grammar', kr: 'A 아/어/해 지다', vn: 'Trở nên A', note: '' },
-    { id: 'sc2_g26', level: 'TOPIK 2', type: 'grammar', kr: 'V/A기 때문에 / N 때문에', vn: 'Vì ... nên ...', note: '' },
-
-    { id: 'sc2_g27', level: 'TOPIK 2', type: 'grammar', kr: 'V고 있다', vn: 'Đang làm V', note: '' },
-    { id: 'sc2_g28', level: 'TOPIK 2', type: 'grammar', kr: 'V 는 중이다', vn: 'Đang trong quá trình làm V', note: '' },
-    { id: 'sc2_g29', level: 'TOPIK 2', type: 'grammar', kr: 'V (으)ㄴ 적이 있다/없다', vn: 'Đã từng / Chưa từng làm V', note: '' },
-
-    { id: 'sc2_g30', level: 'TOPIK 2', type: 'grammar', kr: 'V (으)면서', vn: 'Vừa... vừa... (Làm này làm kia)', note: '' },
-    { id: 'sc2_g31', level: 'TOPIK 2', type: 'grammar', kr: 'V (으)ㄹ 것 같다 / N 인 것 같다', vn: 'Có lẽ, Hình như', note: '' },
-    { id: 'sc2_g33', level: 'TOPIK 2', type: 'grammar', kr: 'A/V 게 되다', vn: 'Được, bị, trở nên', note: '' },
-
-    { id: 'sc2_g34', level: 'TOPIK 2', type: 'grammar', kr: 'V 기 쉽다', vn: 'Dễ làm V', note: '' },
-    { id: 'sc2_g35', level: 'TOPIK 2', type: 'grammar', kr: 'V (으)려면', vn: 'Nếu muốn, để muốn', note: '' },
-
-    { id: 'sc2_g32', level: 'TOPIK 2', type: 'grammar', kr: 'V (으)ㄴ 지', vn: 'Từ khi ... (kể từ lúc)', note: '' },
-    { id: 'sc2_g33', level: 'TOPIK 2', type: 'grammar', kr: 'V 기로 하다', vn: 'Quyết định làm V', note: '' },
-    { id: 'sc2_g33', level: 'TOPIK 2', type: 'grammar', kr: 'V(으)ㄴ 지 + 시간 + 되다', vn: 'Đã bao lâu kể từ khi làm V', note: '' },
-
-    { id: 'sc2_g34', level: 'TOPIK 2', type: 'grammar', kr: 'N 에 대해(서)', vn: 'Về (một chủ đề)', note: '' },
-    { id: 'sc2_g35', level: 'TOPIK 2', type: 'grammar', kr: 'V 는데 / A (으)ㄴ데', vn: 'Dẫn dắt tình huống, đối lập (Đưa ra bối cảnh)', note: '' },
-
-    { id: 'sc2_g36', level: 'TOPIK 2', type: 'grammar', kr: 'V 자마자', vn: 'Ngay sau khi..., vừa mới...thì', note: '' },
-    { id: 'sc2_g37', level: 'TOPIK 2', type: 'grammar', kr: 'V 느라고', vn: 'Vì bận làm V nên (kết quả tiêu cực)', note: '' },
-    { id: 'sc2_g38', level: 'TOPIK 2', type: 'grammar', kr: 'V/A 잖아요', vn: 'Chẳng phải là ... sao (nhắc lại điều đã biết)', note: '' },
-
-    { id: 'sc2_g39', level: 'TOPIK 2', type: 'grammar', kr: 'V (으)ㄹ 줄 알다/모르다', vn: 'Biết / Không biết cách làm gì', note: '' },
-    { id: 'sc2_g40', level: 'TOPIK 2', type: 'grammar', kr: 'V 고 나서', vn: 'Sau khi làm xong V thì', note: '' },
-    { id: 'sc2_g41', level: 'TOPIK 2', type: 'grammar', kr: 'V 다가', vn: 'Đang làm V thì chuyển sang hành động khác', note: '' },
+    { id: 'sc_62', level: 'Sơ cấp', type: 'grammar', kr: 'V 지 말다', vn: 'Đừng làm V', note: '' },
+    { id: 'sc_63', level: 'Sơ cấp', type: 'grammar', kr: 'N 보다 / N 에 비해서', vn: 'So với N', note: '' },
+    { id: 'sc_64', level: 'Sơ cấp', type: 'grammar', kr: 'V (으)ㄴ N', vn: 'Định ngữ động từ (quá khứ)', note: '' },
+    { id: 'sc_65', level: 'Sơ cấp', type: 'grammar', kr: 'V 는 N', vn: 'Định ngữ động từ (hiện tại)', note: '' },
+    { id: 'sc_66', level: 'Sơ cấp', type: 'grammar', kr: 'V (으)ㄹ N', vn: 'Định ngữ động từ (tương lai)', note: '' },
+    { id: 'sc_67', level: 'Sơ cấp', type: 'grammar', kr: 'A (으)ㄴ N', vn: 'Định ngữ tính từ (hiện tại)', note: '' },
+    { id: 'sc_68', level: 'Sơ cấp', type: 'grammar', kr: 'V/A 지요? (죠?)', vn: 'Đúng không?', note: '' },
+    { id: 'sc_69', level: 'Sơ cấp', type: 'grammar', kr: 'V/A 네요', vn: 'Cảm thán (ngạc nhiên, đồng tình)', note: '' },
+    { id: 'sc_70', level: 'Sơ cấp', type: 'grammar', kr: 'V기 전에', vn: 'Trước khi làm gì', note: '' },
+    { id: 'sc_71', level: 'Sơ cấp', type: 'grammar', kr: 'V (으)ㄴ 후에 / 다음에', vn: 'Sau khi làm gì', note: '' },
+    { id: 'sc_72', level: 'Sơ cấp', type: 'grammar', kr: 'V/A 거나', vn: 'Hoặc là', note: '' },
+    { id: 'sc_73', level: 'Sơ cấp', type: 'grammar', kr: 'N (이)나', vn: 'Hoặc N, Tận (nhấn mạnh số lượng)', note: '' },
+    { id: 'sc_74', level: 'Sơ cấp', type: 'grammar', kr: 'V기 위해서 / N 을/를 위해서', vn: 'Để (mục đích)', note: '' },
+    { id: 'sc_75', level: 'Sơ cấp', type: 'grammar', kr: 'V고 있다', vn: 'Đang làm V', note: '' },
+    { id: 'sc_76', level: 'Sơ cấp', type: 'grammar', kr: 'V 는 중이다', vn: 'Đang trong quá trình làm V', note: '' },
+    { id: 'sc_77', level: 'Sơ cấp', type: 'grammar', kr: 'V (으)ㄴ 적이 있다/없다', vn: 'Đã từng / Chưa từng làm V', note: '' },
+    { id: 'sc_78', level: 'Sơ cấp', type: 'grammar', kr: 'V (으)ㄹ 것 같다 / N 인 것 같다', vn: 'Có lẽ, Hình như', note: '' },
+    { id: 'sc_79', level: 'Sơ cấp', type: 'grammar', kr: 'A/V 게 되다', vn: 'Được, bị, trở nên', note: '' },
+    { id: 'sc_80', level: 'Sơ cấp', type: 'grammar', kr: 'V 기 쉽다', vn: 'Dễ làm V', note: '' },
+    { id: 'sc_81', level: 'Sơ cấp', type: 'grammar', kr: 'V 기로 하다', vn: 'Quyết định làm V', note: '' },
+    { id: 'sc_82', level: 'Sơ cấp', type: 'grammar', kr: 'V 기도 하다', vn: 'Cũng làm V', note: '' },
+    { id: 'sc_83', level: 'Sơ cấp', type: 'grammar', kr: 'N 에 대해(서)', vn: 'Về (một chủ đề)', note: '' },
+    { id: 'sc_84', level: 'Sơ cấp', type: 'grammar', kr: 'V 는데 / A (으)ㄴ데', vn: 'Dẫn dắt tình huống, đối lập (Đưa ra bối cảnh)', note: '' },
+    { id: 'sc_85', level: 'Sơ cấp', type: 'grammar', kr: 'V 자마자', vn: 'Ngay sau khi..., vừa mới...thì', note: '' },
+    { id: 'sc_86', level: 'Sơ cấp', type: 'grammar', kr: 'V 느라고', vn: 'Vì bận làm V nên (kết quả tiêu cực)', note: '' },
+    { id: 'sc_87', level: 'Sơ cấp', type: 'grammar', kr: 'V/A 잖아요', vn: 'Chẳng phải là ... sao (nhắc lại điều đã biết)', note: '' },
+    { id: 'sc_88', level: 'Sơ cấp', type: 'grammar', kr: 'V (으)ㄹ 줄 알다/모르다', vn: 'Biết / Không biết cách làm gì', note: '' },
+    { id: 'sc_89', level: 'Sơ cấp', type: 'grammar', kr: 'V 고 나서', vn: 'Sau khi làm xong V thì', note: '' },
+    { id: 'sc_90', level: 'Sơ cấp', type: 'grammar', kr: 'V 다가', vn: 'Đang làm V thì chuyển sang hành động khác', note: '' },
 
     // ==========================================
     // BÀI 1: 입니다 / 입니까? 
