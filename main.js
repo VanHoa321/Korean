@@ -6,12 +6,12 @@ var currentLevel = 'TOPIK 1';
 var currentCat = 'new';
 var currentLes = 'All';
 var isFlashcard = true;
-var isReverseLang = false; 
+var isReverseLang = false; // false: Trên Việt - Dưới Hàn | true: Trên Hàn - Dưới Việt
 
 window.onload = function () {
     renderLessonButtons(); 
     filterCards();      
-    initBackToTop(); // Khởi tạo tính năng cuộn lên đầu trang
+    initBackToTop(); 
 };
 
 function renderLessonButtons() {
@@ -74,16 +74,14 @@ function setCategory(cat, btn) {
     const levelContainer = document.getElementById('level-buttons');
     if (levelContainer) {
         if (currentCat === 'grammar') {
-            // Khi chọn Ngữ pháp: Hiển thị 3 mục Sơ - Trung - Cao
             levelContainer.innerHTML = `
                 <span class="fw-bold text-theme small me-2"><i class="fi fi-rr-layers me-1"></i>CẤP HỌC</span>
                 <button class="btn btn-theme btn-sm rounded-pill filter-btn active" onclick="setLevel('Sơ cấp', this)">Sơ cấp</button>
                 <button class="btn btn-theme-outline btn-sm rounded-pill filter-btn" onclick="setLevel('Trung cấp', this)">Trung cấp</button>
                 <button class="btn btn-theme-outline btn-sm rounded-pill filter-btn" onclick="setLevel('Cao cấp', this)">Cao cấp</button>
             `;
-            currentLevel = 'Sơ cấp'; // Reset về Sơ cấp mặc định cho ngữ pháp
+            currentLevel = 'Sơ cấp'; 
         } else {
-            // Khi chọn các mục khác: Quay về hiển thị 6 mục TOPIK như cũ
             levelContainer.innerHTML = `
                 <span class="fw-bold text-theme small me-2"><i class="fi fi-rr-layers me-1"></i>CẤP HỌC</span>
                 <button class="btn btn-theme btn-sm rounded-pill filter-btn active" onclick="setLevel('TOPIK 1', this)">SC 1</button>
@@ -93,7 +91,7 @@ function setCategory(cat, btn) {
                 <button class="btn btn-theme-outline btn-sm rounded-pill filter-btn" onclick="setLevel('TOPIK 5', this)">CC 5</button>
                 <button class="btn btn-theme-outline btn-sm rounded-pill filter-btn" onclick="setLevel('TOPIK 6', this)">CC 6</button>
             `;
-            currentLevel = 'TOPIK 1'; // Reset về TOPIK 1 mặc định cho từ vựng
+            currentLevel = 'TOPIK 1'; 
         }
     }
 
@@ -129,7 +127,6 @@ function filterCards() {
     var keyword = document.getElementById('searchInput').value.toLowerCase().trim();
 
     var filtered = data.filter(i => {
-        // Kiểm tra logic lọc theo cấp độ học
         let passLevel = (i.level === currentLevel);
 
         let passCat = false;
@@ -212,7 +209,6 @@ function renderCards(cards) {
                 </div>
             `;
         } else {
-            // CHẾ ĐỘ HIỂN THỊ THƯỜNG
             if (card.type === 'grammar') {
                 div.innerHTML = starHTML + `
                     <div class="korean-text kr-text text-start mb-2">${card.kr} ${speakerHTML}</div>
@@ -288,47 +284,27 @@ function toggleFlashcardMode(btn) {
     isFlashcard = true;
     isQuiz = false;
     isWriting = false;
-
     updateActiveButton(btn);
-
-    let controls = document.getElementById('flashcard-controls');
-    if (controls) controls.style.display = 'block';
-
     filterCards();
 }
 
-function toggleQuizMode(btn) {
-    isFlashcard = false;
-    isQuiz = true;
-    isWriting = false;
+function toggleLangDirection(btn) {
+    isReverseLang = !isReverseLang; 
 
-    updateActiveButton(btn);
-
-    let controls = document.getElementById('flashcard-controls');
-    if (controls) controls.style.display = 'none';
-
+    if (btn) {
+        if (isReverseLang) {
+            btn.classList.remove('btn-theme-outline');
+            btn.classList.add('btn-theme');
+            btn.title = "Mặt trên hiện tại: Tiếng Hàn";
+        } else {
+            btn.classList.remove('btn-theme');
+            btn.classList.add('btn-theme-outline');
+            btn.title = "Mặt trên hiện tại: Tiếng Việt";
+        }
+    }
     filterCards();
 }
 
-function toggleWriteMode(btn) {
-    isFlashcard = false;
-    isQuiz = false;
-    isWriting = true;
-
-    updateActiveButton(btn);
-
-    let controls = document.getElementById('flashcard-controls');
-    if (controls) controls.style.display = 'none';
-
-    filterCards();
-}
-
-function toggleLangDirection() {
-    isReverseLang = document.getElementById('langToggle').checked;
-    filterCards();
-}
-
-// Logic Nút cuộn lên đầu trang 
 function initBackToTop() {
     const btn = document.getElementById('backToTopBtn');
     if (!btn) return;
