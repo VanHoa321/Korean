@@ -3017,7 +3017,7 @@ var data = [
     { id: 'q2_v843', lesson: "Bài 8", type: "new", level: 'TOPIK 2', vn: "Buồn rầu", kr: "우울하다", note: "" },
     { id: 'q2_v844', lesson: "Bài 8", type: "new", level: 'TOPIK 2', vn: "Buồn chán", kr: "심심하다", note: "" },
     { id: 'q2_v845', lesson: "Bài 8", type: "new", level: 'TOPIK 2', vn: "Sợ hãi", kr: "무섭다", note: "" },
-    { id: 'q2_v846', lesson: "Bài 8", type: "new", level: 'TOPIK 2', vn: "Ngạc nhiên", kr: "놀다", note: "" },
+    { id: 'q2_v846', lesson: "Bài 8", type: "new", level: 'TOPIK 2', vn: "Ngạc nhiên", kr: "놀라다", note: "" },
     { id: 'q2_v847', lesson: "Bài 8", type: "new", level: 'TOPIK 2', vn: "Buồn cười", kr: "웃기다", note: "" },
     { id: 'q2_v848', lesson: "Bài 8", type: "new", level: 'TOPIK 2', vn: "Thích thú, hứng thú", kr: "신나다", note: "" },
     { id: 'q2_v849', lesson: "Bài 8", type: "new", level: 'TOPIK 2', vn: "Giận dữ, cáu", kr: "화나다", note: "" },
