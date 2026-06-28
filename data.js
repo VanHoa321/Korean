@@ -1,23 +1,23 @@
 var data = [
 
-    { id: 'sc_1', level: 'Sơ cấp', type: 'grammar', kr: 'N 입니다 / 입니까?', vn: 'Là N / Là N phải không? (Trang trọng)', note: '' },
-    { id: 'sc_2', level: 'Sơ cấp', type: 'grammar', kr: 'N 이/가 아닙니다', vn: 'Không phải là N', note: '' },
-    { id: 'sc_3', level: 'Sơ cấp', type: 'grammar', kr: 'V/A ㅂ/습니다 / ㅂ/습니까', vn: 'Đuôi câu trần thuật / nghi vấn (Trang trọng)', note: '' },
+    // { id: 'sc_1', level: 'Sơ cấp', type: 'grammar', kr: 'N 입니다 / 입니까?', vn: 'Là N / Là N phải không? (Trang trọng)', note: '' },
+    // { id: 'sc_2', level: 'Sơ cấp', type: 'grammar', kr: 'N 이/가 아닙니다', vn: 'Không phải là N', note: '' },
+    // { id: 'sc_3', level: 'Sơ cấp', type: 'grammar', kr: 'V/A ㅂ/습니다 / ㅂ/습니까', vn: 'Đuôi câu trần thuật / nghi vấn (Trang trọng)', note: '' },
 
-    { id: 'sc_4', level: 'Sơ cấp', type: 'grammar', kr: 'N이/가 + A', vn: 'N thì (tính từ)', note: '' },
+    // { id: 'sc_4', level: 'Sơ cấp', type: 'grammar', kr: 'N이/가 + A', vn: 'N thì (tính từ)', note: '' },
 
-    { id: 'sc_5', level: 'Sơ cấp', type: 'grammar', kr: 'N1 와/과/하고/(이)랑 N2', vn: 'N1 và N2', note: '' },
-    { id: 'sc_6', level: 'Sơ cấp', type: 'grammar', kr: 'N와/과/하고/(이)랑 (함께/같이) + V', vn: 'Làm V cùng với N', note: '' },
-    { id: 'sc_7', level: 'Sơ cấp', type: 'grammar', kr: 'V/A 고', vn: 'Và, rồi (nối câu)', note: '' },
+    // { id: 'sc_5', level: 'Sơ cấp', type: 'grammar', kr: 'N1 와/과/하고/(이)랑 N2', vn: 'N1 và N2', note: '' },
+    // { id: 'sc_6', level: 'Sơ cấp', type: 'grammar', kr: 'N와/과/하고/(이)랑 (함께/같이) + V', vn: 'Làm V cùng với N', note: '' },
+    // { id: 'sc_7', level: 'Sơ cấp', type: 'grammar', kr: 'V/A 고', vn: 'Và, rồi (nối câu)', note: '' },
 
-    { id: 'sc_8', level: 'Sơ cấp', type: 'grammar', kr: 'N이에요/예요', vn: 'Là N (đuôi câu thân mật)', note: '' },
-    { id: 'sc_9', level: 'Sơ cấp', type: 'grammar', kr: 'V/A 아/어요', vn: 'V/A (đuôi câu thân mật)', note: '' },
-    { id: 'sc_10', level: 'Sơ cấp', type: 'grammar', kr: 'N이/가 아니에요', vn: 'Không phải là N (đuôi câu thân mật)', note: '' },
+    // { id: 'sc_8', level: 'Sơ cấp', type: 'grammar', kr: 'N이에요/예요', vn: 'Là N (đuôi câu thân mật)', note: '' },
+    // { id: 'sc_9', level: 'Sơ cấp', type: 'grammar', kr: 'V/A 아/어요', vn: 'V/A (đuôi câu thân mật)', note: '' },
+    // { id: 'sc_10', level: 'Sơ cấp', type: 'grammar', kr: 'N이/가 아니에요', vn: 'Không phải là N (đuôi câu thân mật)', note: '' },
 
-    { id: 'sc_11', level: 'Sơ cấp', type: 'grammar', kr: 'N이었다/였다', vn: 'Đã là N (thì quá khứ)', note: '' },
-    { id: 'sc_12', level: 'Sơ cấp', type: 'grammar', kr: 'V/A 았다/었다', vn: 'Đã V/A (thì quá khứ)', note: '' },
-    { id: 'sc_13', level: 'Sơ cấp', type: 'grammar', kr: 'N이/가 아니었다', vn: 'Đã không phải là N', note: '' },
-    { id: 'sc_14', level: 'Sơ cấp', type: 'grammar', kr: '안 + V/A = V/A 지 않다', vn: 'Không V/A', note: '' },
+    // { id: 'sc_11', level: 'Sơ cấp', type: 'grammar', kr: 'N이었다/였다', vn: 'Đã là N (thì quá khứ)', note: '' },
+    // { id: 'sc_12', level: 'Sơ cấp', type: 'grammar', kr: 'V/A 았다/었다', vn: 'Đã V/A (thì quá khứ)', note: '' },
+    // { id: 'sc_13', level: 'Sơ cấp', type: 'grammar', kr: 'N이/가 아니었다', vn: 'Đã không phải là N', note: '' },
+    // { id: 'sc_14', level: 'Sơ cấp', type: 'grammar', kr: '안 + V/A = V/A 지 않다', vn: 'Không V/A', note: '' },
 
     { id: 'sc_15', level: 'Sơ cấp', type: 'grammar', kr: 'V (으)ㅂ시다', vn: 'Hãy cùng làm V (gần như quyết định)', note: '' },
     { id: 'sc_16', level: 'Sơ cấp', type: 'grammar', kr: 'V (으)ㄹ래요?', vn: 'Nhé, Nhỉ? (Hỏi ý kiến)', note: '' },
@@ -109,6 +109,8 @@ var data = [
     { id: 'sc_88', level: 'Sơ cấp', type: 'grammar', kr: 'V (으)ㄹ 줄 알다/모르다', vn: 'Biết / Không biết cách làm gì', note: '' },
     { id: 'sc_89', level: 'Sơ cấp', type: 'grammar', kr: 'V 고 나서', vn: 'Sau khi làm xong V thì', note: '' },
     { id: 'sc_90', level: 'Sơ cấp', type: 'grammar', kr: 'V 다가', vn: 'Đang làm V thì chuyển sang hành động khác', note: '' },
+    { id: 'sc_91', level: 'Sơ cấp', type: 'grammar', kr: 'A/V 아/어도', vn: 'Dù, cho dù', note: '' },
+    { id: 'sc_92', level: 'Sơ cấp', type: 'grammar', kr: 'V 기(를) 바라다', vn: 'Mong rằng, hy vọng rằng', note: '' },
 
     // ==========================================
     // BÀI 1: 입니다 / 입니까? 
@@ -3656,5 +3658,26 @@ var data = [
     { id: 'p166', level: 'TOPIK 2', type: 'personal', lesson: 'Từ luyện đề', kr: '불쌍하다', vn: 'Tội nghiệp', note: '' },
     { id: 'p167', level: 'TOPIK 2', type: 'personal', lesson: 'Từ luyện đề', kr: '재우다', vn: 'Sắp xếp', note: '' },
     { id: 'p168', level: 'TOPIK 2', type: 'personal', lesson: 'Từ luyện đề', kr: '나타나다', vn: 'Xuất hiện', note: '' },
+
+    { id: 'p169', level: 'TOPIK 2', type: 'personal', lesson: 'Từ luyện đề', kr: '습관', vn: 'Thói quen', note: '' },
+    { id: 'p170', level: 'TOPIK 2', type: 'personal', lesson: 'Từ luyện đề', kr: '실제', vn: 'Thực tế', note: '' },
+    { id: 'p171', level: 'TOPIK 2', type: 'personal', lesson: 'Từ luyện đề', kr: '설명', vn: 'Giải thích', note: '' },
+    { id: 'p172', level: 'TOPIK 2', type: 'personal', lesson: 'Từ luyện đề', kr: '움직', vn: 'Chuyển động', note: '' },
+    { id: 'p173', level: 'TOPIK 2', type: 'personal', lesson: 'Từ luyện đề', kr: '재료', vn: 'Nguyên liệu', note: '' },
+    { id: 'p174', level: 'TOPIK 2', type: 'personal', lesson: 'Từ luyện đề', kr: '약하다', vn: 'Yếu', note: '' },
+    { id: 'p175', level: 'TOPIK 2', type: 'personal', lesson: 'Từ luyện đề', kr: '비누', vn: 'Xà phòng', note: '' },
+    { id: 'p176', level: 'TOPIK 2', type: 'personal', lesson: 'Từ luyện đề', kr: '얼마 전에', vn: 'Cách đây không lâu', note: '' },
+    { id: 'p177', level: 'TOPIK 2', type: 'personal', lesson: 'Từ luyện đề', kr: '드디어', vn: 'Cuối cùng thì, rốt cuộc', note: '' },
+    { id: 'p178', level: 'TOPIK 2', type: 'personal', lesson: 'Từ luyện đề', kr: '달걀', vn: 'Quả trứng', note: '' },
+    { id: 'p179', level: 'TOPIK 2', type: 'personal', lesson: 'Từ luyện đề', kr: '바닥', vn: 'Đáy', note: '' },
+    { id: 'p180', level: 'TOPIK 2', type: 'personal', lesson: 'Từ luyện đề', kr: '따라', vn: 'Làm theo', note: '' },
+    { id: 'p181', level: 'TOPIK 2', type: 'personal', lesson: 'Từ luyện đề', kr: '결정', vn: 'Quyết định', note: '' },
+    { id: 'p182', level: 'TOPIK 2', type: 'personal', lesson: 'Từ luyện đề', kr: '이런', vn: 'Như thế này', note: 'Định ngữ' },
+    { id: 'p183', level: 'TOPIK 2', type: 'personal', lesson: 'Từ luyện đề', kr: '나누다', vn: 'Chia sẻ', note: '' },
+    { id: 'p184', level: 'TOPIK 2', type: 'personal', lesson: 'Từ luyện đề', kr: '기쁨', vn: 'Niềm vui', note: '' },
+    { id: 'p185', level: 'TOPIK 2', type: 'personal', lesson: 'Từ luyện đề', kr: '냄새', vn: 'Mùi', note: '' },
+    { id: 'p186', level: 'TOPIK 2', type: 'personal', lesson: 'Từ luyện đề', kr: '밀가루', vn: 'Bột mì', note: '' },
+    { id: 'p187', level: 'TOPIK 2', type: 'personal', lesson: 'Từ luyện đề', kr: '자연', vn: 'Tự nhiên', note: '' },
+    { id: 'p188', level: 'TOPIK 2', type: 'personal', lesson: 'Từ luyện đề', kr: '별로', vn: 'Không ... lắm', note: '' },
 
 ];
