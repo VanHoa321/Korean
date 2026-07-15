@@ -1,7 +1,7 @@
 // ==========================================
 // BIẾN TOÀN CỤC & KHỞI TẠO
 // ==========================================
-var starredCards = JSON.parse(localStorage.getItem('myStarredCards')) || [];
+var starredCards = (JSON.parse(localStorage.getItem('myStarredCards')) || []).map(String);
 var currentLevel = 'TOPIK 1';
 var currentCat = 'new';
 var currentLes = 'All';
@@ -131,7 +131,7 @@ function filterCards() {
 
         let passCat = false;
         if (currentCat === 'All') passCat = true;
-        else if (currentCat === 'starred') passCat = starredCards.includes(i.id);
+        else if (currentCat === 'starred') passCat = starredCards.includes(String(i.id));
         else if (i.type === currentCat) passCat = true;
 
         let passLes = false;
@@ -177,7 +177,7 @@ function renderCards(cards) {
         div.className = 'flashcard' + ((card.type === 'translate' || card.type === 'practice') ? ' translate-card' : '');
         
         let safeKr = (card.kr || '').replace(/'/g, "\\'");
-        let isStarred = starredCards.includes(card.id);
+        let isStarred = starredCards.includes(String(card.id));
         let starIcon = isStarred ? "fi-sr-star" : "fi-rr-star";
         let starHTML = `<i class="fi ${starIcon} star-btn ${isStarred ? 'active' : ''}" onclick="toggleStar('${card.id}', event, this)"></i>`;
         let speakerHTML = `<i class="fi fi-rr-volume speaker-btn" title="Nghe phát âm" onclick="speakKorean('${safeKr}', event)"></i>`;
@@ -232,9 +232,10 @@ function renderCards(cards) {
 
 function toggleStar(cardId, event, iconElement) {
     event.stopPropagation();
+    
+    cardId = String(cardId); 
+    
     let index = starredCards.indexOf(cardId);
-    if (index === -1) index = starredCards.indexOf(parseInt(cardId));
-    if (index === -1) index = starredCards.indexOf(String(cardId));
 
     if (index === -1) {
         starredCards.push(cardId);
