@@ -1,23 +1,23 @@
 var data = [
 
-    // { id: 'sc_1', level: 'Sơ cấp', type: 'grammar', kr: 'N 입니다 / 입니까?', vn: 'Là N / Là N phải không? (Trang trọng)', note: '' },
-    // { id: 'sc_2', level: 'Sơ cấp', type: 'grammar', kr: 'N 이/가 아닙니다', vn: 'Không phải là N', note: '' },
-    // { id: 'sc_3', level: 'Sơ cấp', type: 'grammar', kr: 'V/A ㅂ/습니다 / ㅂ/습니까', vn: 'Đuôi câu trần thuật / nghi vấn (Trang trọng)', note: '' },
+    { id: 'sc_1', level: 'Sơ cấp', type: 'grammar', kr: 'N 입니다 / 입니까?', vn: 'Là N / Là N phải không? (Trang trọng)', note: '' },
+    { id: 'sc_2', level: 'Sơ cấp', type: 'grammar', kr: 'N 이/가 아닙니다', vn: 'Không phải là N', note: '' },
+    { id: 'sc_3', level: 'Sơ cấp', type: 'grammar', kr: 'V/A ㅂ/습니다 / ㅂ/습니까', vn: 'Đuôi câu trần thuật / nghi vấn (Trang trọng)', note: '' },
 
-    // { id: 'sc_4', level: 'Sơ cấp', type: 'grammar', kr: 'N이/가 + A', vn: 'N thì (tính từ)', note: '' },
+    { id: 'sc_4', level: 'Sơ cấp', type: 'grammar', kr: 'N이/가 + A', vn: 'N thì (tính từ)', note: '' },
 
-    // { id: 'sc_5', level: 'Sơ cấp', type: 'grammar', kr: 'N1 와/과/하고/(이)랑 N2', vn: 'N1 và N2', note: '' },
-    // { id: 'sc_6', level: 'Sơ cấp', type: 'grammar', kr: 'N와/과/하고/(이)랑 (함께/같이) + V', vn: 'Làm V cùng với N', note: '' },
-    // { id: 'sc_7', level: 'Sơ cấp', type: 'grammar', kr: 'V/A 고', vn: 'Và, rồi (nối câu)', note: '' },
+    { id: 'sc_5', level: 'Sơ cấp', type: 'grammar', kr: 'N1 와/과/하고/(이)랑 N2', vn: 'N1 và N2', note: '' },
+    { id: 'sc_6', level: 'Sơ cấp', type: 'grammar', kr: 'N와/과/하고/(이)랑 (함께/같이) + V', vn: 'Làm V cùng với N', note: '' },
+    { id: 'sc_7', level: 'Sơ cấp', type: 'grammar', kr: 'V/A 고', vn: 'Và, rồi (nối câu)', note: '' },
 
-    // { id: 'sc_8', level: 'Sơ cấp', type: 'grammar', kr: 'N이에요/예요', vn: 'Là N (đuôi câu thân mật)', note: '' },
-    // { id: 'sc_9', level: 'Sơ cấp', type: 'grammar', kr: 'V/A 아/어요', vn: 'V/A (đuôi câu thân mật)', note: '' },
-    // { id: 'sc_10', level: 'Sơ cấp', type: 'grammar', kr: 'N이/가 아니에요', vn: 'Không phải là N (đuôi câu thân mật)', note: '' },
+    { id: 'sc_8', level: 'Sơ cấp', type: 'grammar', kr: 'N이에요/예요', vn: 'Là N (đuôi câu thân mật)', note: '' },
+    { id: 'sc_9', level: 'Sơ cấp', type: 'grammar', kr: 'V/A 아/어요', vn: 'V/A (đuôi câu thân mật)', note: '' },
+    { id: 'sc_10', level: 'Sơ cấp', type: 'grammar', kr: 'N이/가 아니에요', vn: 'Không phải là N (đuôi câu thân mật)', note: '' },
 
-    // { id: 'sc_11', level: 'Sơ cấp', type: 'grammar', kr: 'N이었다/였다', vn: 'Đã là N (thì quá khứ)', note: '' },
-    // { id: 'sc_12', level: 'Sơ cấp', type: 'grammar', kr: 'V/A 았다/었다', vn: 'Đã V/A (thì quá khứ)', note: '' },
-    // { id: 'sc_13', level: 'Sơ cấp', type: 'grammar', kr: 'N이/가 아니었다', vn: 'Đã không phải là N', note: '' },
-    // { id: 'sc_14', level: 'Sơ cấp', type: 'grammar', kr: '안 + V/A = V/A 지 않다', vn: 'Không V/A', note: '' },
+    { id: 'sc_11', level: 'Sơ cấp', type: 'grammar', kr: 'N이었다/였다', vn: 'Đã là N (thì quá khứ)', note: '' },
+    { id: 'sc_12', level: 'Sơ cấp', type: 'grammar', kr: 'V/A 았다/었다', vn: 'Đã V/A (thì quá khứ)', note: '' },
+    { id: 'sc_13', level: 'Sơ cấp', type: 'grammar', kr: 'N이/가 아니었다', vn: 'Đã không phải là N', note: '' },
+    { id: 'sc_14', level: 'Sơ cấp', type: 'grammar', kr: '안 + V/A = V/A 지 않다', vn: 'Không V/A', note: '' },
 
     { id: 'sc_15', level: 'Sơ cấp', type: 'grammar', kr: 'V (으)ㅂ시다', vn: 'Hãy cùng làm V (gần như quyết định)', note: '' },
     { id: 'sc_16', level: 'Sơ cấp', type: 'grammar', kr: 'V (으)ㄹ래요?', vn: 'Nhé, Nhỉ? (Hỏi ý kiến)', note: '' },
